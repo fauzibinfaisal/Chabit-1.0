@@ -1,20 +1,21 @@
 //
-//  HomeViewController.swift
-//  ChabitApp
+//  YourEmotionViewController.swift
+//  Chabit-1.0
 //
-//  Created by Fauzi Fauzi on 17/07/19.
+//  Created by Fauzi Fauzi on 18/07/19.
 //  Copyright © 2019 C2G10. All rights reserved.
 //
 
 import UIKit
 import HealthKit
 
-
-class HomeViewController: UIViewController {
+class YourEmotionViewController: UIViewController {
+    @IBOutlet weak var stressLevelLabel: UILabel!
     @IBOutlet weak var HRVProgressView: UIProgressView!
-    @IBOutlet weak var heartRateLabel: UILabel!
+    @IBOutlet weak var hearthRateLabel: UILabel!
     
     let healthStore = HKHealthStore()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,9 +39,7 @@ class HomeViewController: UIViewController {
                 }
             }
         }
-        
     }
-    
     
     // MARK: HRV & HR VALUE
     func getHRVSampleQuery() {
@@ -67,20 +66,21 @@ class HomeViewController: UIViewController {
                     let updatedDate = formater.string(from: result.startDate)
                     let countHRVDouble = quantity.doubleValue(for: HKUnit(from: "ms"))
                     print(" countHRV \(countHRVDouble)")
-
+                    
                     var countHRV = Float(countHRVDouble)/65
                     print(" countHRV \(countHRV)")
-
+                    
                     if countHRV>1 {
                         countHRV = Float.random(in: 0..<0.2)
                         print(countHRV)
                     }
                     let countHRVtoProgress = 1-Float(countHRV)
                     print(" countHRVtoProgress \(countHRVtoProgress)")
-
+                    
                     DispatchQueue.main.async {
-//                        self.dateLabel.text = "Today \(updatedDate)"
-//                        self.HRVLabel.text = String(format: "HRV: %.2f ms", countHRVDouble)
+                        if(countHRVtoProgress > 0.7){
+                            self.stressLevelLabel.text = "Your stress level is HIGH"
+                        }
                         self.HRVProgressView.setProgress(countHRVtoProgress, animated: true)
                     }
                     //Today 09.00 AM
@@ -97,7 +97,7 @@ class HomeViewController: UIViewController {
                     print(" heartRate \(countHR)")
                     
                     DispatchQueue.main.async {
-                        self.heartRateLabel.text = String(format: "❤️ HeartRate: %.1f ms", countHR)
+                        self.hearthRateLabel.text = String(format: "❤️ HeartRate: %.1f ms", countHR)
                     }
                 }
             }
