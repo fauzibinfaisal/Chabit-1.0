@@ -3,19 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		989F90A320DA8489F5989CD5 /* Pods_Chabit_1_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE760CF90C32B5A91BAE047 /* Pods_Chabit_1_0.framework */; };
 		EBF81C5D22E0790200BBE4CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF81C5C22E0790200BBE4CF /* AppDelegate.swift */; };
 		EBF81C5F22E0790200BBE4CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF81C5E22E0790200BBE4CF /* ViewController.swift */; };
 		EBF81C6222E0790200BBE4CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBF81C6022E0790200BBE4CF /* Main.storyboard */; };
 		EBF81C6522E0790200BBE4CF /* Chabit_1_0.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EBF81C6322E0790200BBE4CF /* Chabit_1_0.xcdatamodeld */; };
 		EBF81C6722E0790300BBE4CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBF81C6622E0790300BBE4CF /* Assets.xcassets */; };
 		EBF81C6A22E0790300BBE4CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBF81C6822E0790300BBE4CF /* LaunchScreen.storyboard */; };
+		EBF81C7922E07A2B00BBE4CF /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF81C7522E07A2A00BBE4CF /* SettingViewController.swift */; };
+		EBF81C7A22E07A2B00BBE4CF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF81C7622E07A2A00BBE4CF /* HomeViewController.swift */; };
+		EBF81C7B22E07A2B00BBE4CF /* ProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF81C7722E07A2A00BBE4CF /* ProgressViewController.swift */; };
+		EBF81C7C22E07A2B00BBE4CF /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF81C7822E07A2A00BBE4CF /* OnBoardingViewController.swift */; };
+		EBF81C7E22E07A3600BBE4CF /* CardUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF81C7D22E07A3600BBE4CF /* CardUIView.swift */; };
+		EBF81C8022E07A3C00BBE4CF /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF81C7F22E07A3C00BBE4CF /* Habit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F66B4B0BBE27E51C3C89558 /* Pods-Chabit-1.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chabit-1.0.debug.xcconfig"; path = "Target Support Files/Pods-Chabit-1.0/Pods-Chabit-1.0.debug.xcconfig"; sourceTree = "<group>"; };
+		8DE760CF90C32B5A91BAE047 /* Pods_Chabit_1_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chabit_1_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF81C5922E0790200BBE4CF /* Chabit-1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chabit-1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF81C5C22E0790200BBE4CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBF81C5E22E0790200BBE4CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +33,13 @@
 		EBF81C6622E0790300BBE4CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBF81C6922E0790300BBE4CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBF81C6B22E0790300BBE4CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBF81C7522E07A2A00BBE4CF /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		EBF81C7622E07A2A00BBE4CF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EBF81C7722E07A2A00BBE4CF /* ProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewController.swift; sourceTree = "<group>"; };
+		EBF81C7822E07A2A00BBE4CF /* OnBoardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		EBF81C7D22E07A3600BBE4CF /* CardUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardUIView.swift; sourceTree = "<group>"; };
+		EBF81C7F22E07A3C00BBE4CF /* Habit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		F87AB90C2E9CC1F7F2721322 /* Pods-Chabit-1.0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chabit-1.0.release.xcconfig"; path = "Target Support Files/Pods-Chabit-1.0/Pods-Chabit-1.0.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +47,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				989F90A320DA8489F5989CD5 /* Pods_Chabit_1_0.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23ED6D74939942C6DBCDE5E5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F66B4B0BBE27E51C3C89558 /* Pods-Chabit-1.0.debug.xcconfig */,
+				F87AB90C2E9CC1F7F2721322 /* Pods-Chabit-1.0.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		58A4917C481AE5BDC06E177B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8DE760CF90C32B5A91BAE047 /* Pods_Chabit_1_0.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EBF81C5022E0790200BBE4CF = {
 			isa = PBXGroup;
 			children = (
+				EBF81C7422E07A0500BBE4CF /* Helper */,
+				EBF81C7322E079FF00BBE4CF /* View */,
+				EBF81C7222E079F700BBE4CF /* Controller */,
+				EBF81C7122E079F200BBE4CF /* Model */,
 				EBF81C5B22E0790200BBE4CF /* Chabit-1.0 */,
 				EBF81C5A22E0790200BBE4CF /* Products */,
+				23ED6D74939942C6DBCDE5E5 /* Pods */,
+				58A4917C481AE5BDC06E177B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +97,48 @@
 			isa = PBXGroup;
 			children = (
 				EBF81C5C22E0790200BBE4CF /* AppDelegate.swift */,
-				EBF81C5E22E0790200BBE4CF /* ViewController.swift */,
-				EBF81C6022E0790200BBE4CF /* Main.storyboard */,
 				EBF81C6622E0790300BBE4CF /* Assets.xcassets */,
 				EBF81C6822E0790300BBE4CF /* LaunchScreen.storyboard */,
 				EBF81C6B22E0790300BBE4CF /* Info.plist */,
 				EBF81C6322E0790200BBE4CF /* Chabit_1_0.xcdatamodeld */,
 			);
 			path = "Chabit-1.0";
+			sourceTree = "<group>";
+		};
+		EBF81C7122E079F200BBE4CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EBF81C7F22E07A3C00BBE4CF /* Habit.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EBF81C7222E079F700BBE4CF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EBF81C7622E07A2A00BBE4CF /* HomeViewController.swift */,
+				EBF81C7822E07A2A00BBE4CF /* OnBoardingViewController.swift */,
+				EBF81C7722E07A2A00BBE4CF /* ProgressViewController.swift */,
+				EBF81C7522E07A2A00BBE4CF /* SettingViewController.swift */,
+				EBF81C5E22E0790200BBE4CF /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EBF81C7322E079FF00BBE4CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EBF81C6022E0790200BBE4CF /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EBF81C7422E07A0500BBE4CF /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				EBF81C7D22E07A3600BBE4CF /* CardUIView.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBF81C6E22E0790300BBE4CF /* Build configuration list for PBXNativeTarget "Chabit-1.0" */;
 			buildPhases = (
+				3EB23B69D6C31C7C8921C2F3 /* [CP] Check Pods Manifest.lock */,
 				EBF81C5522E0790200BBE4CF /* Sources */,
 				EBF81C5622E0790200BBE4CF /* Frameworks */,
 				EBF81C5722E0790200BBE4CF /* Resources */,
+				1945BB859BD4E3663D7121D4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +209,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1945BB859BD4E3663D7121D4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chabit-1.0/Pods-Chabit-1.0-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chabit-1.0/Pods-Chabit-1.0-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chabit-1.0/Pods-Chabit-1.0-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3EB23B69D6C31C7C8921C2F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chabit-1.0-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EBF81C5522E0790200BBE4CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBF81C7A22E07A2B00BBE4CF /* HomeViewController.swift in Sources */,
 				EBF81C6522E0790200BBE4CF /* Chabit_1_0.xcdatamodeld in Sources */,
+				EBF81C7C22E07A2B00BBE4CF /* OnBoardingViewController.swift in Sources */,
 				EBF81C5F22E0790200BBE4CF /* ViewController.swift in Sources */,
+				EBF81C7B22E07A2B00BBE4CF /* ProgressViewController.swift in Sources */,
 				EBF81C5D22E0790200BBE4CF /* AppDelegate.swift in Sources */,
+				EBF81C8022E07A3C00BBE4CF /* Habit.swift in Sources */,
+				EBF81C7E22E07A3600BBE4CF /* CardUIView.swift in Sources */,
+				EBF81C7922E07A2B00BBE4CF /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +408,7 @@
 		};
 		EBF81C6F22E0790300BBE4CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F66B4B0BBE27E51C3C89558 /* Pods-Chabit-1.0.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +427,7 @@
 		};
 		EBF81C7022E0790300BBE4CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F87AB90C2E9CC1F7F2721322 /* Pods-Chabit-1.0.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
