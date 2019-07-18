@@ -9,6 +9,8 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    @IBOutlet weak var HRVProgressView: UIProgressView!
+    @IBOutlet weak var heartRateLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

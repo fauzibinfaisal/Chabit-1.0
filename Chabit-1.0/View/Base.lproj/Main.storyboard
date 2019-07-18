@@ -64,7 +64,7 @@
         <!--On Boarding View Controller-->
         <scene sceneID="Usn-rA-mfA">
             <objects>
-                <viewController id="qQv-rN-wNf" customClass="OnBoardingViewController" customModule="Chabit_V1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qQv-rN-wNf" customClass="OnBoardingViewController" customModule="Chabit_1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HdR-Sb-oVC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,7 +100,7 @@
         <!--Hello Kitty-->
         <scene sceneID="WQu-VV-oTk">
             <objects>
-                <viewController id="wFk-mP-Qiw" customClass="HomeViewController" customModule="Chabit_V1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wFk-mP-Qiw" customClass="HomeViewController" customModule="Chabit_1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9e9-8E-r1Y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,7 +111,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kyU-w8-fCA">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3pH-66-fHx" customClass="CardUIView" customModule="Chabit_V1" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3pH-66-fHx" customClass="CardUIView" customModule="Chabit_1_0" customModuleProvider="target">
                                                 <rect key="frame" x="32" y="20" width="351" height="241"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Emotion Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7O-hR-YzQ">
@@ -183,6 +183,13 @@
                                                         <rect key="frame" x="305" y="9" width="25" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rC0-Jd-jzF">
+                                                        <rect key="frame" x="8" y="11" width="335" height="222"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <connections>
+                                                            <segue destination="2h4-We-a7E" kind="show" id="C2T-9I-c4G"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -213,7 +220,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z0O-bR-jT0" customClass="CardUIView" customModule="Chabit_V1" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z0O-bR-jT0" customClass="CardUIView" customModule="Chabit_1_0" customModuleProvider="target">
                                                 <rect key="frame" x="28" y="368" width="351" height="110"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
@@ -249,7 +256,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ayo-aq-KaQ" customClass="CardUIView" customModule="Chabit_V1" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ayo-aq-KaQ" customClass="CardUIView" customModule="Chabit_1_0" customModuleProvider="target">
                                                 <rect key="frame" x="32" y="498" width="351" height="110"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
@@ -285,7 +292,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RYv-6w-7Hg" customClass="CardUIView" customModule="Chabit_V1" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RYv-6w-7Hg" customClass="CardUIView" customModule="Chabit_1_0" customModuleProvider="target">
                                                 <rect key="frame" x="32" y="632" width="351" height="110"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
@@ -321,7 +328,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B15-85-rqY" customClass="CardUIView" customModule="Chabit_V1" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B15-85-rqY" customClass="CardUIView" customModule="Chabit_1_0" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="853" width="191" height="112"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
@@ -350,7 +357,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5HS-DZ-hRL" customClass="CardUIView" customModule="Chabit_V1" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5HS-DZ-hRL" customClass="CardUIView" customModule="Chabit_1_0" customModuleProvider="target">
                                                 <rect key="frame" x="215" y="853" width="191" height="112"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
@@ -418,10 +425,94 @@ Nature</string>
                     </view>
                     <navigationItem key="navigationItem" title="Hello Kitty" id="Xet-8M-HyV"/>
                     <size key="freeformSize" width="414" height="1200"/>
+                    <connections>
+                        <outlet property="HRVProgressView" destination="F8C-nV-x5K" id="DGe-ar-cow"/>
+                        <outlet property="heartRateLabel" destination="5OU-ZT-dpn" id="qy8-Dv-q0m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0GJ-K0-qVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2959" y="1775"/>
+            <point key="canvasLocation" x="2957.971014492754" y="1774.5535714285713"/>
+        </scene>
+        <!--Your Emotion-->
+        <scene sceneID="8ji-7V-7FE">
+            <objects>
+                <viewController id="2h4-We-a7E" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xq8-SN-vKs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZkX-8R-2Wy" customClass="CardUIView" customModule="Chabit_1_0" customModuleProvider="target">
+                                <rect key="frame" x="10" y="108" width="394" height="715"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Strees level is" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vA-3S-iQU">
+                                        <rect key="frame" x="19" y="8" width="259" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GSn-QR-cj2">
+                                        <rect key="frame" x="19" y="57" width="338" height="2"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </progressView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="❤️ Heart Rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9z-eu-svu">
+                                        <rect key="frame" x="19" y="86" width="338" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HrX-bS-psb">
+                                        <rect key="frame" x="19" y="165" width="338" height="477"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">The stress and heart rate data is provided by Health App, and can be only provided if you are using Apple Watch.
+The data shown here is not ¬ the real time, but updated when the Health App gets new data from Apple Watch.
+The stress is calculated from the average of Heart Rate Variability (HRV) which has scientifically proven has connection with stress level. When your HRV is low, it indicates that you’re currently in stress condition, and vice versa. Even though the science can measure your stress level, we believe you as the owner of your own body and thoughts is the only one who know how stress you are and we are here to help you manage them!
+ The heart rate data is used to know whether you’re healthy or not. Richard Stein, M.D., professor of medicine and cardiology at New York University school of medicine said, 
+“If you’re very fit, it (resting heart rate) could change to 40. A less active person might have a heart rate between 60 and 100 (beats per minute). That’s because the heart muscle has to work harder to maintain bodily functions, making it higher,” Stein said.
+</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="1" height="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.44571435450000002" green="0.83297151329999997" blue="0.7176366448" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xYA-kI-uvC" firstAttribute="trailing" secondItem="ZkX-8R-2Wy" secondAttribute="trailing" constant="10" id="87X-bn-LtH"/>
+                            <constraint firstItem="ZkX-8R-2Wy" firstAttribute="bottom" secondItem="xYA-kI-uvC" secondAttribute="bottom" constant="10" id="BVM-39-4Ch"/>
+                            <constraint firstItem="ZkX-8R-2Wy" firstAttribute="top" secondItem="xYA-kI-uvC" secondAttribute="top" constant="20" id="dOm-Xc-v5v"/>
+                            <constraint firstItem="ZkX-8R-2Wy" firstAttribute="leading" secondItem="xYA-kI-uvC" secondAttribute="leading" constant="10" id="jBo-xd-Wid"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xYA-kI-uvC"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Your Emotion" largeTitleDisplayMode="never" id="1Oc-GI-zGP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pby-SF-Uer" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3849" y="1675"/>
         </scene>
         <!--Home-->
         <scene sceneID="tOd-1g-1lh">
