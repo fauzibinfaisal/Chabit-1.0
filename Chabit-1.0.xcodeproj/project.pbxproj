@@ -14,6 +14,9 @@
 		EB0F59DA22E0E6FB00CF0BB8 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F59D922E0E6FB00CF0BB8 /* CardView.swift */; };
 		EB0F59DC22E1600500CF0BB8 /* MeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F59DB22E1600500CF0BB8 /* MeditationViewController.swift */; };
 		EB0F59DE22E1602900CF0BB8 /* SoundOfNatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F59DD22E1602900CF0BB8 /* SoundOfNatureViewController.swift */; };
+		EB0F59E022E1A35E00CF0BB8 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB0F59DF22E1A35E00CF0BB8 /* CustomTableViewCell.xib */; };
+		EB0F59E322E1A38300CF0BB8 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F59E122E1A38300CF0BB8 /* CustomTableViewCell.swift */; };
+		EB0F59E422E1A38300CF0BB8 /* MorningActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F59E222E1A38300CF0BB8 /* MorningActivitiesViewController.swift */; };
 		EBF81C5D22E0790200BBE4CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF81C5C22E0790200BBE4CF /* AppDelegate.swift */; };
 		EBF81C5F22E0790200BBE4CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF81C5E22E0790200BBE4CF /* ViewController.swift */; };
 		EBF81C6222E0790200BBE4CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBF81C6022E0790200BBE4CF /* Main.storyboard */; };
@@ -39,6 +42,9 @@
 		EB0F59D922E0E6FB00CF0BB8 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		EB0F59DB22E1600500CF0BB8 /* MeditationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
 		EB0F59DD22E1602900CF0BB8 /* SoundOfNatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundOfNatureViewController.swift; sourceTree = "<group>"; };
+		EB0F59DF22E1A35E00CF0BB8 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		EB0F59E122E1A38300CF0BB8 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		EB0F59E222E1A38300CF0BB8 /* MorningActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MorningActivitiesViewController.swift; sourceTree = "<group>"; };
 		EBF81C5922E0790200BBE4CF /* Chabit-1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chabit-1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF81C5C22E0790200BBE4CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBF81C5E22E0790200BBE4CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +143,8 @@
 			isa = PBXGroup;
 			children = (
 				EB0F59CE22E0A75F00CF0BB8 /* CustomButton.swift */,
+				EB0F59E122E1A38300CF0BB8 /* CustomTableViewCell.swift */,
+				EB0F59E222E1A38300CF0BB8 /* MorningActivitiesViewController.swift */,
 				EB0F59CD22E0A75F00CF0BB8 /* SetupNameViewController.swift */,
 				EB0F59CF22E0A75F00CF0BB8 /* SetupReminderViewController.swift */,
 				EBF81C7622E07A2A00BBE4CF /* HomeViewController.swift */,
@@ -156,6 +164,7 @@
 			children = (
 				EBF81C6022E0790200BBE4CF /* Main.storyboard */,
 				EBF81C6822E0790300BBE4CF /* LaunchScreen.storyboard */,
+				EB0F59DF22E1A35E00CF0BB8 /* CustomTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -235,6 +244,7 @@
 			files = (
 				EBF81C6A22E0790300BBE4CF /* LaunchScreen.storyboard in Resources */,
 				EBF81C6722E0790300BBE4CF /* Assets.xcassets in Resources */,
+				EB0F59E022E1A35E00CF0BB8 /* CustomTableViewCell.xib in Resources */,
 				EBF81C6222E0790200BBE4CF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +300,7 @@
 			files = (
 				EB0F59D022E0A75F00CF0BB8 /* SetupNameViewController.swift in Sources */,
 				EBF81C7A22E07A2B00BBE4CF /* HomeViewController.swift in Sources */,
+				EB0F59E422E1A38300CF0BB8 /* MorningActivitiesViewController.swift in Sources */,
 				EBF81C6522E0790200BBE4CF /* Chabit_1_0.xcdatamodeld in Sources */,
 				EBF81C7C22E07A2B00BBE4CF /* OnBoardingViewController.swift in Sources */,
 				EBF81C8522E086F700BBE4CF /* YourEmotionViewController.swift in Sources */,
@@ -297,6 +308,7 @@
 				EBF81C7B22E07A2B00BBE4CF /* ProgressViewController.swift in Sources */,
 				EB0F59DC22E1600500CF0BB8 /* MeditationViewController.swift in Sources */,
 				EB0F59DE22E1602900CF0BB8 /* SoundOfNatureViewController.swift in Sources */,
+				EB0F59E322E1A38300CF0BB8 /* CustomTableViewCell.swift in Sources */,
 				EBF81C5D22E0790200BBE4CF /* AppDelegate.swift in Sources */,
 				EB0F59D122E0A75F00CF0BB8 /* CustomButton.swift in Sources */,
 				EB0F59D222E0A75F00CF0BB8 /* SetupReminderViewController.swift in Sources */,

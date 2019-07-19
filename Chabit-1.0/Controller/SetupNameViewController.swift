@@ -8,9 +8,7 @@
 
 import UIKit
 
-class SetupNameViewController: UIViewController, UITextFieldDelegate{
-    @IBOutlet weak var nameLabel: UILabel!
-    
+class SetupNameViewController: UIViewController, UITextFieldDelegate{    
     
     
     @IBOutlet weak var nameTF: UITextField!{
@@ -23,7 +21,7 @@ class SetupNameViewController: UIViewController, UITextFieldDelegate{
     
     @IBAction func saveName(_ sender: UIButton) {
         setName()
-        nameLabel.text = UserDefaults.standard.string(forKey: "name")
+        
     }
     
     func setName(){
@@ -35,12 +33,19 @@ class SetupNameViewController: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTF.delegate = self
-        nameLabel.text = UserDefaults.standard.string(forKey: "name")
         
 
         // Do any additional setup after loading the view.
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameTF.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 
     /*
     // MARK: - Navigation

@@ -12,12 +12,15 @@ class SettingViewController: UIViewController {
     var cellSettings = ["Natification","Sound","Alarm"]
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var userNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
+        
+        userNameLabel.text = UserDefaults.standard.string(forKey: "name")
         
     }
     
@@ -37,6 +40,5 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource{
         
         return cell
     }
-    
     
 }

@@ -13,12 +13,19 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var HRVProgressView: UIProgressView!
     @IBOutlet weak var heartRateLabel: UILabel!
     @IBOutlet weak var emotionLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    var nameUser: String!
     
     let healthStore = HKHealthStore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         HRVProgressView.setProgress(0, animated: false)
+        
+        nameUser = UserDefaults.standard.string(forKey: "name")
+        
+        nameLabel.text = "Hello, \(nameUser!)"
         // Do any additional setup after loading the view.
         // MARK: CHECK HEALTH DATA AVAILIBILITY & REQUEST AUTHORIZATION
         if HKHealthStore.isHealthDataAvailable() {
@@ -38,8 +45,9 @@ class HomeViewController: UIViewController {
                 }
             }
         }
-        
     }
+    
+
     
     
     // MARK: HRV & HR VALUE
