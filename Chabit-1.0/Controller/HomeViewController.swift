@@ -9,10 +9,10 @@
 import UIKit
 import HealthKit
 
-
 class HomeViewController: UIViewController {
     @IBOutlet weak var HRVProgressView: UIProgressView!
     @IBOutlet weak var heartRateLabel: UILabel!
+    @IBOutlet weak var emotionLabel: UILabel!
     
     let healthStore = HKHealthStore()
     
@@ -81,6 +81,13 @@ class HomeViewController: UIViewController {
                     DispatchQueue.main.async {
 //                        self.dateLabel.text = "Today \(updatedDate)"
 //                        self.HRVLabel.text = String(format: "HRV: %.2f ms", countHRVDouble)
+                        if(countHRVtoProgress >= 0.7){
+                            self.emotionLabel.text = "😔"
+                        } else if(countHRVtoProgress > 0.3 && countHRVtoProgress < 0.7){
+                            self.emotionLabel.text = "🙂"
+                        } else {
+                            self.emotionLabel.text = "😁"
+                        }
                         self.HRVProgressView.setProgress(countHRVtoProgress, animated: true)
                     }
                     //Today 09.00 AM

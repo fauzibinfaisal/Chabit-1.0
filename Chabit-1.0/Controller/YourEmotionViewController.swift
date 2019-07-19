@@ -13,6 +13,7 @@ class YourEmotionViewController: UIViewController {
     @IBOutlet weak var stressLevelLabel: UILabel!
     @IBOutlet weak var HRVProgressView: UIProgressView!
     @IBOutlet weak var hearthRateLabel: UILabel!
+    @IBOutlet weak var emotionLabel: UILabel!
     
     let healthStore = HKHealthStore()
     
@@ -26,8 +27,7 @@ class YourEmotionViewController: UIViewController {
             // Add code to use HealthKit here.
             print("Health data is available")
             
-            let allTypes = Set([HKObjectType.workoutType(),
-                                HKObjectType.quantityType(forIdentifier: .heartRateVariabilitySDNN)!,
+            let allTypes = Set([HKObjectType.quantityType(forIdentifier: .heartRateVariabilitySDNN)!,
                                 HKObjectType.quantityType(forIdentifier: .heartRate)!])
             healthStore.requestAuthorization(toShare: allTypes, read: allTypes) { (success, error) in
                 if !success {
@@ -78,9 +78,20 @@ class YourEmotionViewController: UIViewController {
                     print(" countHRVtoProgress \(countHRVtoProgress)")
                     
                     DispatchQueue.main.async {
-                        if(countHRVtoProgress > 0.7){
+                        if(countHRVtoProgress >= 0.7){
                             self.stressLevelLabel.text = "Your stress level is HIGH"
+                            self.emotionLabel.text = "😔"
+
+                        } else if(countHRVtoProgress > 0.3 && countHRVtoProgress < 0.7){
+                            self.stressLevelLabel.text = "Your stress level is NORMAL"
+                            self.emotionLabel.text = "🙂"
+
+                        } else {
+                           self.stressLevelLabel.text = "Your stress level is LOW"
+                            self.emotionLabel.text = "😁"
+
                         }
+                        
                         self.HRVProgressView.setProgress(countHRVtoProgress, animated: true)
                     }
                     //Today 09.00 AM
