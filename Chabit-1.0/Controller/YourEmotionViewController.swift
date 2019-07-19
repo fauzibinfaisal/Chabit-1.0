@@ -17,7 +17,7 @@ class YourEmotionViewController: UIViewController {
     
     let healthStore = HKHealthStore()
     
-    
+    @IBOutlet weak var dateUpdatedLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         HRVProgressView.setProgress(0, animated: false)
@@ -64,6 +64,8 @@ class YourEmotionViewController: UIViewController {
                     let formater = DateFormatter()
                     formater.dateFormat = "h:mm a"
                     let updatedDate = formater.string(from: result.startDate)
+                    self.dateUpdatedLabel.text = "Today \(updatedDate)"
+                    
                     let countHRVDouble = quantity.doubleValue(for: HKUnit(from: "ms"))
                     print(" countHRV \(countHRVDouble)")
                     
@@ -76,7 +78,6 @@ class YourEmotionViewController: UIViewController {
                     }
                     let countHRVtoProgress = 1-Float(countHRV)
                     print(" countHRVtoProgress \(countHRVtoProgress)")
-                    
                     DispatchQueue.main.async {
                         if(countHRVtoProgress >= 0.7){
                             self.stressLevelLabel.text = "Your stress level is HIGH"
