@@ -17,6 +17,9 @@
 		EB0F59E022E1A35E00CF0BB8 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB0F59DF22E1A35E00CF0BB8 /* CustomTableViewCell.xib */; };
 		EB0F59E322E1A38300CF0BB8 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F59E122E1A38300CF0BB8 /* CustomTableViewCell.swift */; };
 		EB0F59E422E1A38300CF0BB8 /* MorningActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F59E222E1A38300CF0BB8 /* MorningActivitiesViewController.swift */; };
+		EBB0A7ED22E2FB5600256399 /* rain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EBB0A7EC22E2FB5600256399 /* rain.mp3 */; };
+		EBB0A7F022E2FCDE00256399 /* pods.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EBB0A7EF22E2FCDE00256399 /* pods.mp3 */; };
+		EBB7D8AF22E2E80000CF59D1 /* SoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7D8AE22E2E80000CF59D1 /* SoundCell.swift */; };
 		EBF81C5D22E0790200BBE4CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF81C5C22E0790200BBE4CF /* AppDelegate.swift */; };
 		EBF81C5F22E0790200BBE4CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF81C5E22E0790200BBE4CF /* ViewController.swift */; };
 		EBF81C6222E0790200BBE4CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBF81C6022E0790200BBE4CF /* Main.storyboard */; };
@@ -46,6 +49,9 @@
 		EB0F59E122E1A38300CF0BB8 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		EB0F59E222E1A38300CF0BB8 /* MorningActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MorningActivitiesViewController.swift; sourceTree = "<group>"; };
 		EB0F59E522E2CA4900CF0BB8 /* SoundCardViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoundCardViewCell.xib; sourceTree = "<group>"; };
+		EBB0A7EC22E2FB5600256399 /* rain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rain.mp3; sourceTree = "<group>"; };
+		EBB0A7EF22E2FCDE00256399 /* pods.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pods.mp3; sourceTree = "<group>"; };
+		EBB7D8AE22E2E80000CF59D1 /* SoundCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundCell.swift; sourceTree = "<group>"; };
 		EBF81C5922E0790200BBE4CF /* Chabit-1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chabit-1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF81C5C22E0790200BBE4CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBF81C5E22E0790200BBE4CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +103,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EBB0A7EE22E2FBCB00256399 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
 		EBF81C5022E0790200BBE4CF = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +131,9 @@
 		EBF81C5B22E0790200BBE4CF /* Chabit-1.0 */ = {
 			isa = PBXGroup;
 			children = (
+				EBB0A7EF22E2FCDE00256399 /* pods.mp3 */,
+				EBB0A7EC22E2FB5600256399 /* rain.mp3 */,
+				EBB0A7EE22E2FBCB00256399 /* Music */,
 				EBF81C7422E07A0500BBE4CF /* Helper */,
 				EBF81C7322E079FF00BBE4CF /* View */,
 				EBF81C7222E079F700BBE4CF /* Controller */,
@@ -134,6 +150,7 @@
 		EBF81C7122E079F200BBE4CF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EBB7D8AE22E2E80000CF59D1 /* SoundCell.swift */,
 				EB0F59D922E0E6FB00CF0BB8 /* CardView.swift */,
 				EBF81C7F22E07A3C00BBE4CF /* Habit.swift */,
 			);
@@ -245,6 +262,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBF81C6A22E0790300BBE4CF /* LaunchScreen.storyboard in Resources */,
+				EBB0A7ED22E2FB5600256399 /* rain.mp3 in Resources */,
+				EBB0A7F022E2FCDE00256399 /* pods.mp3 in Resources */,
 				EBF81C6722E0790300BBE4CF /* Assets.xcassets in Resources */,
 				EB0F59E022E1A35E00CF0BB8 /* CustomTableViewCell.xib in Resources */,
 				EBF81C6222E0790200BBE4CF /* Main.storyboard in Resources */,
@@ -313,6 +332,7 @@
 				EB0F59E322E1A38300CF0BB8 /* CustomTableViewCell.swift in Sources */,
 				EBF81C5D22E0790200BBE4CF /* AppDelegate.swift in Sources */,
 				EB0F59D122E0A75F00CF0BB8 /* CustomButton.swift in Sources */,
+				EBB7D8AF22E2E80000CF59D1 /* SoundCell.swift in Sources */,
 				EB0F59D222E0A75F00CF0BB8 /* SetupReminderViewController.swift in Sources */,
 				EBF81C8022E07A3C00BBE4CF /* Habit.swift in Sources */,
 				EBF81C7E22E07A3600BBE4CF /* CardUIView.swift in Sources */,
