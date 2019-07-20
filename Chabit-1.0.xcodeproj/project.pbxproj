@@ -19,6 +19,8 @@
 		EB0F59E422E1A38300CF0BB8 /* MorningActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F59E222E1A38300CF0BB8 /* MorningActivitiesViewController.swift */; };
 		EBB0A7ED22E2FB5600256399 /* rain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EBB0A7EC22E2FB5600256399 /* rain.mp3 */; };
 		EBB0A7F022E2FCDE00256399 /* pods.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EBB0A7EF22E2FCDE00256399 /* pods.mp3 */; };
+		EBB0A7F222E30EEE00256399 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB0A7F122E30EEE00256399 /* AddItemViewController.swift */; };
+		EBB0A7F422E30F7800256399 /* HealthlyHabitsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB0A7F322E30F7800256399 /* HealthlyHabitsData.swift */; };
 		EBB7D8AF22E2E80000CF59D1 /* SoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7D8AE22E2E80000CF59D1 /* SoundCell.swift */; };
 		EBF81C5D22E0790200BBE4CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF81C5C22E0790200BBE4CF /* AppDelegate.swift */; };
 		EBF81C5F22E0790200BBE4CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF81C5E22E0790200BBE4CF /* ViewController.swift */; };
@@ -51,6 +53,8 @@
 		EB0F59E522E2CA4900CF0BB8 /* SoundCardViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoundCardViewCell.xib; sourceTree = "<group>"; };
 		EBB0A7EC22E2FB5600256399 /* rain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rain.mp3; sourceTree = "<group>"; };
 		EBB0A7EF22E2FCDE00256399 /* pods.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pods.mp3; sourceTree = "<group>"; };
+		EBB0A7F122E30EEE00256399 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		EBB0A7F322E30F7800256399 /* HealthlyHabitsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthlyHabitsData.swift; sourceTree = "<group>"; };
 		EBB7D8AE22E2E80000CF59D1 /* SoundCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundCell.swift; sourceTree = "<group>"; };
 		EBF81C5922E0790200BBE4CF /* Chabit-1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chabit-1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF81C5C22E0790200BBE4CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 				EBB7D8AE22E2E80000CF59D1 /* SoundCell.swift */,
 				EB0F59D922E0E6FB00CF0BB8 /* CardView.swift */,
 				EBF81C7F22E07A3C00BBE4CF /* Habit.swift */,
+				EBB0A7F322E30F7800256399 /* HealthlyHabitsData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 				EBF81C8422E086F700BBE4CF /* YourEmotionViewController.swift */,
 				EB0F59DB22E1600500CF0BB8 /* MeditationViewController.swift */,
 				EB0F59DD22E1602900CF0BB8 /* SoundOfNatureViewController.swift */,
+				EBB0A7F122E30EEE00256399 /* AddItemViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -324,7 +330,9 @@
 				EB0F59E422E1A38300CF0BB8 /* MorningActivitiesViewController.swift in Sources */,
 				EBF81C6522E0790200BBE4CF /* Chabit_1_0.xcdatamodeld in Sources */,
 				EBF81C7C22E07A2B00BBE4CF /* OnBoardingViewController.swift in Sources */,
+				EBB0A7F222E30EEE00256399 /* AddItemViewController.swift in Sources */,
 				EBF81C8522E086F700BBE4CF /* YourEmotionViewController.swift in Sources */,
+				EBB0A7F422E30F7800256399 /* HealthlyHabitsData.swift in Sources */,
 				EBF81C5F22E0790200BBE4CF /* ViewController.swift in Sources */,
 				EBF81C7B22E07A2B00BBE4CF /* ProgressViewController.swift in Sources */,
 				EB0F59DC22E1600500CF0BB8 /* MeditationViewController.swift in Sources */,

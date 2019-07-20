@@ -509,6 +509,7 @@ Nature</string>
                         <outlet property="HRVProgressView" destination="F8C-nV-x5K" id="DGe-ar-cow"/>
                         <outlet property="emotionLabel" destination="fdJ-WP-9qK" id="YGX-dE-6RV"/>
                         <outlet property="heartRateLabel" destination="5OU-ZT-dpn" id="qy8-Dv-q0m"/>
+                        <outlet property="morningActivitiesCountLabel" destination="LLl-Ww-W44" id="HTA-fY-if5"/>
                         <outlet property="nameLabel" destination="oGI-eW-D2b" id="iXq-vg-qrm"/>
                     </connections>
                 </viewController>
@@ -964,6 +965,7 @@ morning for a better whole day mood!</string>
                     <connections>
                         <outlet property="tableView" destination="X2u-D6-oa2" id="cZG-M0-Q64"/>
                         <outlet property="viewImage" destination="lMw-Ry-qpo" id="A4z-hd-teo"/>
+                        <segue destination="CWg-0r-OZh" kind="show" identifier="todAddItem" id="MQW-uS-VQj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ssV-Kn-N5w" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1161,6 +1163,52 @@ Drinking one glass of water right after waking up will make your mind more fresh
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wKc-uW-wro" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="9" y="0.0"/>
+        </scene>
+        <!--add item-->
+        <scene sceneID="lgB-q4-C43">
+            <objects>
+                <viewController id="CWg-0r-OZh" customClass="AddItemViewController" customModule="Chabit_1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yIq-Yf-zco"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mhm-eR-hO7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UWs-uT-Xah">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZBC-ob-lqS">
+                                <rect key="frame" x="0.0" y="96" width="414" height="800"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell" id="iQV-js-pRp">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iQV-js-pRp" id="HEe-W0-XVT">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="oeJ-hx-WTa"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="add item" id="1uD-PR-80r">
+                        <barButtonItem key="rightBarButtonItem" title="Add Yours" id="12G-T2-ZAq">
+                            <connections>
+                                <action selector="addYoursButtonTapped:" destination="CWg-0r-OZh" id="drf-IX-wlq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addItemTableView" destination="ZBC-ob-lqS" id="MfO-dP-Itw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MlB-eh-pFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5278" y="2133"/>
         </scene>
     </scenes>
     <resources>

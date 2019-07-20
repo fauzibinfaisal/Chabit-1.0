@@ -30,7 +30,7 @@ class MorningActivitiesViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
 
-        // Do any additional setup after loading the view.
+        
         loadData()
         
         viewImage.layer.shadowColor = #colorLiteral(red: 0, green: 0.7641252279, blue: 0.8642910123, alpha: 1)
@@ -43,101 +43,20 @@ class MorningActivitiesViewController: UIViewController {
     
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadData()
+    }
+    
 
     @IBAction func addButtonTapped(_ sender: Any) {
         
-        //create the local variable that handle the alert text field
-        var textField = UITextField()
-        
-        //create the alert controler
-        let alert = UIAlertController(title: "Add new item", message: "", preferredStyle: .alert)
-        
-        //create the alert action
-        let action = UIAlertAction(title: "Add", style: .default) { (action) in
-            
-            print("you pressed the add button ")
-            
-            //set the textfielnd popup if they are not blank
-            if textField.text! != "" {
-                
-                    
-                    let newItem = MorningActivityItem(context: self.context)
-                    newItem.activityName = textField.text!
-                    newItem.isDone = false
-                
-                    self.saveData()
-                
-                }
-                
-            
-            
-            //reload the tableview delegate each button pressed
-            self.tableView.reloadData()
-            
-        }
-        
-        
-        //add the text field to the alert controller that we created before
-        alert.addTextField { (alertTextField) in
-            alertTextField.placeholder = "Add yours!"
-            textField = alertTextField
-        }
-        
-        
-        //add the action to the alert controller that we created before then set action with the UIAlertAction (we have created the alert action in line 92)
-        alert.addAction(action)
-        
-        //finaly present or call the alert with this code
-        present(alert, animated: true, completion: nil)
+    performSegue(withIdentifier: "todAddItem", sender: self)
         
         
         
     }
-        
-        
-//        print("YOU PRESSED THE ADD BUTTON")
-//
-//
-//
-//        let newItem = MorningActivityItem(context: self.context)
-//
-//        let alert = UIAlertController(title: "Add your Activity list", message: "fill the text here", preferredStyle: .alert)
-//
-//
-//
-//
-//        let action = UIAlertAction(title: "add", style: .default) { (alert) in
-//
-//            if textField.text != ""{
-//
-//                var textField = UITextField()
-//
-//                newItem.activityName = textField.text!
-//                newItem.isDone = false
-//
-//                self.saveData()
-//                self.tableView.reloadData()
-//
-//                //debug
-//                print("YANG DITULIS DI TEXT FIELD = \(newItem.activityName!)")
-//                print("YOU PRESSED THE ACTION THEN SAVED THE DATA")
-//            }
-//
-//
-//        }
-//
-//        alert.addTextField { (textFieldResult) in
-//
-//            textFieldResult.placeholder = "Add yours here"
-//            textField = textFieldResult
-//        }
-//
-//        alert.addAction(action)
-//        present(alert, animated: true)
-//
-//
-//    }
-
+    
 }
 
 
@@ -194,14 +113,15 @@ extension MorningActivitiesViewController : UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
-        
-    
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.45) {
+                
+                
+                self.morningActivitiesList[indexPath.row].isAdd = false
+                
+                self.morningActivitiesList[indexPath.row].isDone = false
+                self.saveData()
+            }
             
-            self.morningActivitiesList.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .automatic)
-            
-            saveData()
-            tableView.reloadData()
         }
     }
     
@@ -214,6 +134,11 @@ extension MorningActivitiesViewController : UITableViewDelegate, UITableViewData
     func loadData(){
         
         let request :  NSFetchRequest<MorningActivityItem> = MorningActivityItem.fetchRequest()
+        
+        let predicate = NSPredicate(format: "isAdd == true")
+        
+        request.predicate = predicate
+        
         
         do{
             morningActivitiesList =  try context.fetch(request)

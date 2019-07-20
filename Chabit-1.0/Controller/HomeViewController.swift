@@ -8,6 +8,7 @@
 
 import UIKit
 import HealthKit
+import CoreData
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var HRVProgressView: UIProgressView!
@@ -15,12 +16,22 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var emotionLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var morningActivitiesCountLabel: UILabel!
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    
+    
     var nameUser: String!
     
     let healthStore = HKHealthStore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
+        
+        
         HRVProgressView.setProgress(0, animated: false)
         
         nameUser = UserDefaults.standard.string(forKey: "name")
@@ -45,6 +56,43 @@ class HomeViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        var isDoneMorningCount = 0
+        
+        var morningArray = [MorningActivityItem]()
+        
+        morningArray = loadDataMorning()
+        
+        
+        
+        for i in 0..<morningArray.count {
+            if morningArray[i].isAdd ==  true{
+                isDoneMorningCount += 1
+            }
+        }
+        
+        morningActivitiesCountLabel.text = String("\(isDoneMorningCount) Activities")
+        
+    }
+    
+    
+    //my function
+    func loadDataMorning() -> Array<MorningActivityItem> {
+        
+        let request :  NSFetchRequest<MorningActivityItem> = MorningActivityItem.fetchRequest()
+        
+        var result: Array<MorningActivityItem>?
+        
+        do{
+            result =  try context.fetch(request)
+        }catch{
+            print("failed to load data \(error)")
+        }
+        
+        return result!
+        
     }
     
 
