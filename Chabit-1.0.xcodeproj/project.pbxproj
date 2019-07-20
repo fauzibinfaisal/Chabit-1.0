@@ -45,6 +45,7 @@
 		EB0F59DF22E1A35E00CF0BB8 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		EB0F59E122E1A38300CF0BB8 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		EB0F59E222E1A38300CF0BB8 /* MorningActivitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MorningActivitiesViewController.swift; sourceTree = "<group>"; };
+		EB0F59E522E2CA4900CF0BB8 /* SoundCardViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoundCardViewCell.xib; sourceTree = "<group>"; };
 		EBF81C5922E0790200BBE4CF /* Chabit-1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chabit-1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF81C5C22E0790200BBE4CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBF81C5E22E0790200BBE4CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +163,7 @@
 		EBF81C7322E079FF00BBE4CF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EB0F59E522E2CA4900CF0BB8 /* SoundCardViewCell.xib */,
 				EBF81C6022E0790200BBE4CF /* Main.storyboard */,
 				EBF81C6822E0790300BBE4CF /* LaunchScreen.storyboard */,
 				EB0F59DF22E1A35E00CF0BB8 /* CustomTableViewCell.xib */,

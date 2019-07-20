@@ -9,22 +9,17 @@
 import UIKit
 
 class SoundOfNatureViewController: UIViewController {
+    
+    let nameSounds = ["Cast of Pods","","Anthem of Nature","Waterfall Rhapsody"]
+    let soundDurations = ["4 min","3 min", "6 min"]
+    let soundNames = ["cast_of_pods","cast_of_pods", "cast_of_pods"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
 }

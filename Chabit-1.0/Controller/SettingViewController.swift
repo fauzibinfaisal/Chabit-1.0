@@ -9,7 +9,7 @@
 import UIKit
 
 class SettingViewController: UIViewController {
-    var cellSettings = ["Natification","Sound","Alarm"]
+    var cellSettings = ["Notification","Sound","Alarm"]
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var userNameLabel: UILabel!
@@ -21,7 +21,6 @@ class SettingViewController: UIViewController {
         tableView.dataSource = self
         
         userNameLabel.text = UserDefaults.standard.string(forKey: "name")
-        
     }
     
     //MARK : COBA UBAH
