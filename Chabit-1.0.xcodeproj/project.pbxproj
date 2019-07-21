@@ -22,6 +22,9 @@
 		EBB0A7F222E30EEE00256399 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB0A7F122E30EEE00256399 /* AddItemViewController.swift */; };
 		EBB0A7F422E30F7800256399 /* HealthlyHabitsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB0A7F322E30F7800256399 /* HealthlyHabitsData.swift */; };
 		EBB7D8AF22E2E80000CF59D1 /* SoundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7D8AE22E2E80000CF59D1 /* SoundCell.swift */; };
+		EBD4C39C22E4AF1900CB4091 /* ProgressActivitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD4C39B22E4AF1900CB4091 /* ProgressActivitiesCell.swift */; };
+		EBD4C39E22E4C92F00CB4091 /* DayProgressViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD4C39D22E4C92F00CB4091 /* DayProgressViewCell.swift */; };
+		EBD4C3A022E4C96A00CB4091 /* DateProgressViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD4C39F22E4C96A00CB4091 /* DateProgressViewCell.swift */; };
 		EBF81C5D22E0790200BBE4CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF81C5C22E0790200BBE4CF /* AppDelegate.swift */; };
 		EBF81C5F22E0790200BBE4CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF81C5E22E0790200BBE4CF /* ViewController.swift */; };
 		EBF81C6222E0790200BBE4CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBF81C6022E0790200BBE4CF /* Main.storyboard */; };
@@ -56,6 +59,9 @@
 		EBB0A7F122E30EEE00256399 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		EBB0A7F322E30F7800256399 /* HealthlyHabitsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthlyHabitsData.swift; sourceTree = "<group>"; };
 		EBB7D8AE22E2E80000CF59D1 /* SoundCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundCell.swift; sourceTree = "<group>"; };
+		EBD4C39B22E4AF1900CB4091 /* ProgressActivitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressActivitiesCell.swift; sourceTree = "<group>"; };
+		EBD4C39D22E4C92F00CB4091 /* DayProgressViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayProgressViewCell.swift; sourceTree = "<group>"; };
+		EBD4C39F22E4C96A00CB4091 /* DateProgressViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateProgressViewCell.swift; sourceTree = "<group>"; };
 		EBF81C5922E0790200BBE4CF /* Chabit-1.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chabit-1.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF81C5C22E0790200BBE4CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBF81C5E22E0790200BBE4CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +164,9 @@
 				EB0F59D922E0E6FB00CF0BB8 /* CardView.swift */,
 				EBF81C7F22E07A3C00BBE4CF /* Habit.swift */,
 				EBB0A7F322E30F7800256399 /* HealthlyHabitsData.swift */,
+				EBD4C39B22E4AF1900CB4091 /* ProgressActivitiesCell.swift */,
+				EBD4C39D22E4C92F00CB4091 /* DayProgressViewCell.swift */,
+				EBD4C39F22E4C96A00CB4091 /* DateProgressViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -333,13 +342,16 @@
 				EBB0A7F222E30EEE00256399 /* AddItemViewController.swift in Sources */,
 				EBF81C8522E086F700BBE4CF /* YourEmotionViewController.swift in Sources */,
 				EBB0A7F422E30F7800256399 /* HealthlyHabitsData.swift in Sources */,
+				EBD4C39E22E4C92F00CB4091 /* DayProgressViewCell.swift in Sources */,
 				EBF81C5F22E0790200BBE4CF /* ViewController.swift in Sources */,
 				EBF81C7B22E07A2B00BBE4CF /* ProgressViewController.swift in Sources */,
+				EBD4C3A022E4C96A00CB4091 /* DateProgressViewCell.swift in Sources */,
 				EB0F59DC22E1600500CF0BB8 /* MeditationViewController.swift in Sources */,
 				EB0F59DE22E1602900CF0BB8 /* SoundOfNatureViewController.swift in Sources */,
 				EB0F59E322E1A38300CF0BB8 /* CustomTableViewCell.swift in Sources */,
 				EBF81C5D22E0790200BBE4CF /* AppDelegate.swift in Sources */,
 				EB0F59D122E0A75F00CF0BB8 /* CustomButton.swift in Sources */,
+				EBD4C39C22E4AF1900CB4091 /* ProgressActivitiesCell.swift in Sources */,
 				EBB7D8AF22E2E80000CF59D1 /* SoundCell.swift in Sources */,
 				EB0F59D222E0A75F00CF0BB8 /* SetupReminderViewController.swift in Sources */,
 				EBF81C8022E07A3C00BBE4CF /* Habit.swift in Sources */,

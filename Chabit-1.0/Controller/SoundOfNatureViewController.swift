@@ -101,9 +101,6 @@ extension SoundOfNatureViewController: UICollectionViewDataSource, UICollectionV
         } else {
             stopButton.alpha = 0
         }
-
-//        playMusic(nameMusic: soundNames[indexPath.row])
-
     }
     
 }

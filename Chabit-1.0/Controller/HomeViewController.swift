@@ -43,8 +43,7 @@ class HomeViewController: UIViewController {
             // Add code to use HealthKit here.
             print("Health data is available")
             
-            let allTypes = Set([HKObjectType.workoutType(),
-                                HKObjectType.quantityType(forIdentifier: .heartRateVariabilitySDNN)!,
+            let allTypes = Set([HKObjectType.quantityType(forIdentifier: .heartRateVariabilitySDNN)!,
                                 HKObjectType.quantityType(forIdentifier: .heartRate)!])
             healthStore.requestAuthorization(toShare: allTypes, read: allTypes) { (success, error) in
                 if !success {

@@ -24,7 +24,6 @@ class SettingViewController: UIViewController {
     }
     
     //MARK : COBA UBAH
-    
 }
 
 extension SettingViewController: UITableViewDelegate, UITableViewDataSource{
