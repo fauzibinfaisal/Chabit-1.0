@@ -74,7 +74,7 @@ class SetupReminderViewController: UIViewController, UITextFieldDelegate {
         print("\(hour) : \(minute)")
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "hmm"
+        dateFormatter.dateFormat = "hh:mm"
         reminderTF.text = dateFormatter.string(from: sender.date)
         
     }

@@ -213,6 +213,9 @@
                         <outlet property="dateCollectionView" destination="m41-32-Fj5" id="P9V-Sc-yeX"/>
                         <outlet property="dayCollectionView" destination="hKg-ET-nn4" id="KN5-sA-XdD"/>
                         <outlet property="progressActivitiesCollectionView" destination="K72-Wn-2CO" id="7Zz-nl-Mnh"/>
+                        <outlet property="sumActivitiesLabel" destination="6xW-8G-4PK" id="an9-9M-BLD"/>
+                        <outlet property="sumDoneActivitiesLabel" destination="LkY-T5-pyN" id="uDl-6g-aQd"/>
+                        <outlet property="userNameLabel" destination="QMR-kB-ioo" id="TP2-1z-I6s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pGC-yf-n8E" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -723,7 +726,7 @@ Nature</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meditation " translatesAutoresizingMaskIntoConstraints="NO" id="vfq-bF-JsY">
-                                <rect key="frame" x="0.0" y="79" width="414" height="253"/>
+                                <rect key="frame" x="0.0" y="79" width="414" height="253.00000000000023"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vXC-Yn-G3B">
                                 <rect key="frame" x="0.0" y="342" width="414" height="471"/>
@@ -1230,7 +1233,7 @@ morning for a better whole day mood!</string>
                                     <segue destination="BNV-ba-fn4" kind="show" id="2tS-Nu-GTk"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fLd-rP-Gu2">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fLd-rP-Gu2">
                                 <rect key="frame" x="57" y="428" width="300" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -1261,7 +1264,7 @@ morning for a better whole day mood!</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Mb-wt-Czx">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Mb-wt-Czx">
                                 <rect key="frame" x="57" y="428" width="300" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -1330,7 +1333,7 @@ morning for a better whole day mood!</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Lets do it!"/>
                                 <connections>
-                                    <segue destination="TVj-v3-tdC" kind="show" id="W7B-4H-YSk"/>
+                                    <segue destination="R3V-eX-Ggo" kind="show" id="dSZ-7f-NvR"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="with a glass of water!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gg-HF-KNb">
@@ -1360,7 +1363,7 @@ Drinking one glass of water right after waking up will make your mind more fresh
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wKc-uW-wro" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9" y="0.0"/>
+            <point key="canvasLocation" x="-64" y="0.0"/>
         </scene>
         <!--add item-->
         <scene sceneID="lgB-q4-C43">
@@ -1427,10 +1430,58 @@ Drinking one glass of water right after waking up will make your mind more fresh
             </objects>
             <point key="canvasLocation" x="1079.7101449275362" y="894.64285714285711"/>
         </scene>
+        <!--Health Kit Permission View Controller-->
+        <scene sceneID="T0w-jm-UaT">
+            <objects>
+                <viewController id="R3V-eX-Ggo" customClass="HealthKitPermissionViewController" customModule="Chabit_1_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GtM-TX-Dsr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="One More Step" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uy4-dn-Uvb">
+                                <rect key="frame" x="77" y="149" width="261" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="re6-Xd-g0G" customClass="CustomButton" customModule="Chabit_1_0" customModuleProvider="target">
+                                <rect key="frame" x="57" y="746" width="300" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="TVj-v3-tdC" kind="show" identifier="nextHealthkitSegue" id="ViA-uZ-Zro"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="We need your permission to access your heart rate nad HRV from your Health App." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WT5-Ko-Kpx">
+                                <rect key="frame" x="88" y="498" width="239" height="159.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="healthkit" translatesAutoresizingMaskIntoConstraints="NO" id="acW-My-5wm">
+                                <rect key="frame" x="88" y="260" width="240" height="187"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okR-lD-Sxb">
+                                <rect key="frame" x="193" y="832" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1176470588" green="0.74117647060000003" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="aEe-Iv-UnY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g8t-wr-IUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="745" y="0.0"/>
+        </scene>
     </scenes>
     <resources>
         <image name="afternoonActivities" width="132" height="132"/>
         <image name="alarm" width="512" height="512"/>
+        <image name="healthkit" width="128" height="128"/>
         <image name="meditation" width="132" height="130"/>
         <image name="meditation " width="1304" height="778"/>
         <image name="morningActivities" width="126" height="112"/>

@@ -9,20 +9,29 @@
 import UIKit
 
 class ProgressViewController: UIViewController {
+    @IBOutlet weak var userNameLabel: UILabel!
     
     @IBOutlet weak var dayCollectionView: UICollectionView!
     @IBOutlet weak var dateCollectionView: UICollectionView!
     @IBOutlet weak var progressActivitiesCollectionView: UICollectionView!
+    
+    @IBOutlet weak var sumDoneActivitiesLabel: UILabel!
+    @IBOutlet weak var sumActivitiesLabel: UILabel!
+    
+    
+    
     var dayList = ["T","F","S","M","T","W","T"]
     var dateList = ["18","19","20","21","22","23","24"]
     var activityList = ["Morning","Afternoon","Night"]
-    var activitiesCount = ["3","3","1"]
-    var isCheckedCount = ["3","1","0"]
+    var activitiesCount = [3,3,1]
+    var isCheckedCount = [3,1,0]
     var progressStatus = ["Achieved","In Progress","Soon"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        userNameLabel.text = UserDefaults.standard.string(forKey: "name")
+        
         progressActivitiesCollectionView.delegate = self
         progressActivitiesCollectionView.dataSource = self
         
@@ -31,6 +40,13 @@ class ProgressViewController: UIViewController {
         
         dateCollectionView.delegate = self
         dateCollectionView.dataSource = self
+
+        let sumActivities = activitiesCount.reduce(0, +)
+        let sumIsCheckedCount = isCheckedCount.reduce(0, +)
+        
+        sumDoneActivitiesLabel.text = String(sumIsCheckedCount)
+        sumActivitiesLabel.text = "/\(String(sumActivities))"
+
 
     }
     
@@ -56,7 +72,7 @@ extension ProgressViewController: UICollectionViewDataSource, UICollectionViewDe
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "progressCell", for: indexPath) as? ProgressActivitiesCell
         cell?.activitiesNameLabel.text = activityList[indexPath.row]
         cell?.activitiesCountLabel.text = "/\(activitiesCount[indexPath.row])"
-        cell?.isCheckedCountLabel.text = isCheckedCount[indexPath.row]
+        cell?.isCheckedCountLabel.text = String(isCheckedCount[indexPath.row])
         cell?.progressStatusLabel.text = progressStatus[indexPath.row]
 
         return cell!
