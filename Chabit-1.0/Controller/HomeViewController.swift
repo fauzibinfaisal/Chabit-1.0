@@ -11,12 +11,19 @@ import HealthKit
 import CoreData
 
 class HomeViewController: UIViewController {
+    
+    var destinationIndex : Int?
+    
     @IBOutlet weak var HRVProgressView: UIProgressView!
     @IBOutlet weak var heartRateLabel: UILabel!
     @IBOutlet weak var emotionLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     
-    @IBOutlet weak var morningActivitiesCountLabel: UILabel!
+    @IBOutlet weak var morningActivityCount: UILabel!
+    
+    @IBOutlet weak var afternoonActivityCount: UILabel!
+    
+    @IBOutlet weak var nightActivityCount: UILabel!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -28,7 +35,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
        
         
         
@@ -58,44 +64,48 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        var isDoneMorningCount = 0
+        tabBarController?.tabBar.isHidden = false
+        var morning = [MorningActivity]()
+        var afternoon = [AfternoonActivity]()
+        var night = [NightActivity]()
         
-        var morningArray = [MorningActivityItem]()
-        
-        morningArray = loadDataMorning()
-        
-        
-        
-        for i in 0..<morningArray.count {
-            if morningArray[i].isAdd ==  true{
-                isDoneMorningCount += 1
-            }
-        }
-        
-        morningActivitiesCountLabel.text = String("\(isDoneMorningCount) Activities")
-        
-    }
-    
-    
-    //my function
-    func loadDataMorning() -> Array<MorningActivityItem> {
-        
-        let request :  NSFetchRequest<MorningActivityItem> = MorningActivityItem.fetchRequest()
-        
-        var result: Array<MorningActivityItem>?
-        
+        let request: NSFetchRequest<MorningActivity> = MorningActivity.fetchRequest()
+        let predicate = NSPredicate(format: "morningIsAdd = true")
+        request.predicate = predicate
         do{
-            result =  try context.fetch(request)
+            morning = try context.fetch(request)
+            morningActivityCount.text = String(morning.count) + " activity(s)"
         }catch{
-            print("failed to load data \(error)")
+            print("ERROR LOAD MORNING DATA \(error)")
         }
         
-        return result!
         
+        let request2: NSFetchRequest<AfternoonActivity> = AfternoonActivity.fetchRequest()
+        let predicate2 = NSPredicate(format: "afternoonIsAdd = true")
+        request2.predicate = predicate2
+        do{
+            afternoon = try context.fetch(request2)
+            afternoonActivityCount.text = String(afternoon.count) + " activity(s)"
+        }catch{
+            print("ERROR LOAD MORNING DATA \(error)")
+        }
+        
+        
+        let request3: NSFetchRequest<NightActivity> = NightActivity.fetchRequest()
+        let predicate3 = NSPredicate(format: "nightIsAdd = true")
+        request3.predicate = predicate3
+        do{
+            night = try context.fetch(request3)
+            nightActivityCount.text = String(night.count) + " activity(s)"
+        }catch{
+            print("ERROR LOAD MORNING DATA \(error)")
+            
+        }
     }
+    
+    
     
 
-    
     
     // MARK: HRV & HR VALUE
     func getHRVSampleQuery() {
@@ -159,7 +169,7 @@ class HomeViewController: UIViewController {
                     print(" heartRate \(countHR)")
                     
                     DispatchQueue.main.async {
-                        self.heartRateLabel.text = String(format: "❤️ HeartRate: %.1f ms", countHR)
+                        self.heartRateLabel.text = String(format: "❤️ HeartRate: %.1f bpm", countHR)
                     }
                 }
             }
@@ -168,6 +178,40 @@ class HomeViewController: UIViewController {
         healthStore.execute(sampleQuery)
     }
     
-    // MARK: NEW FUNCTION
+    // MARK: - segue
+    
+    @IBAction func toMorning(_ sender: UIButton) {
+        
+        destinationIndex = sender.tag
+        performSegue(withIdentifier: "toMorning", sender: self)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "toMorning"{
+            let destinationCV = segue.destination as! MorningActivitiesViewController
+            
+            
+            if destinationIndex == 1{
+                
+                destinationCV.activityTime = "morning"
+                //destinationCV.iconActivityImage.image = UIImage(named: "morningActivities")
+                //            destinationCV.iconActivityImage.image = UIImage(named: "morningActivities")
+                //destinationCV.iconActivityImage.image? = UIImage(named: "morningActivities")!
+                
+            }else if destinationIndex == 2{
+                
+                destinationCV.activityTime = "afternoon"
+                //destinationCV.iconActivityImage.image = UIImage(named: "afternoonActivities")
+                
+            }else if destinationIndex == 3{
+                
+                destinationCV.activityTime = "night"
+                //destinationCV.iconActivityImage.image = UIImage(named: "nightActivities")
+            }
+        }
+        
+    }
     
 }

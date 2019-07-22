@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oz6-Fd-fOa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -337,11 +337,13 @@
         <!--Tab Bar Controller-->
         <scene sceneID="mzd-1m-ePP">
             <objects>
-                <tabBarController id="TVj-v3-tdC" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainApp" id="TVj-v3-tdC" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MHu-vb-3f6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.1176470588" green="0.74117647060000003" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.1176470588" green="0.74117647060000003" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="fkz-Hc-czO" kind="relationship" relationship="viewControllers" id="VXt-zc-xgQ"/>
@@ -399,8 +401,16 @@
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9t-dS-reW">
                                                         <rect key="frame" x="0.0" y="0.0" width="351" height="105"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </button>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w2G-P6-cC7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="351" height="110"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
                                                         <connections>
-                                                            <segue destination="jUq-gC-fbG" kind="show" id="dgA-Ip-PAb"/>
+                                                            <action selector="toMorning:" destination="wFk-mP-Qiw" eventType="touchUpInside" id="mWo-t4-Ksz"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -439,6 +449,17 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKp-pH-qqg">
+                                                        <rect key="frame" x="8" y="0.0" width="351" height="110"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="toMorning:" destination="wFk-mP-Qiw" eventType="touchUpInside" id="Gob-dc-HMp"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.1176470588" green="0.74117647060000003" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <userDefinedRuntimeAttributes>
@@ -475,6 +496,17 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNJ-44-SJY">
+                                                        <rect key="frame" x="8" y="0.0" width="351" height="110"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button">
+                                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="toMorning:" destination="wFk-mP-Qiw" eventType="touchUpInside" id="Pno-1K-Cpx"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.1176470588" green="0.74117647060000003" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 <userDefinedRuntimeAttributes>
@@ -508,7 +540,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="191" height="112"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <connections>
-                                                            <segue destination="RO6-h6-tms" kind="show" id="ffq-9d-eOE"/>
+                                                            <segue destination="RO6-h6-tms" kind="show" id="mSg-B3-SN5"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -707,10 +739,13 @@ Nature</string>
                     <size key="freeformSize" width="414" height="1200"/>
                     <connections>
                         <outlet property="HRVProgressView" destination="F8C-nV-x5K" id="DGe-ar-cow"/>
+                        <outlet property="afternoonActivityCount" destination="Aok-Nz-bSC" id="M1K-TH-CBl"/>
                         <outlet property="emotionLabel" destination="fdJ-WP-9qK" id="YGX-dE-6RV"/>
                         <outlet property="heartRateLabel" destination="5OU-ZT-dpn" id="qy8-Dv-q0m"/>
-                        <outlet property="morningActivitiesCountLabel" destination="LLl-Ww-W44" id="HTA-fY-if5"/>
+                        <outlet property="morningActivityCount" destination="LLl-Ww-W44" id="HTA-fY-if5"/>
                         <outlet property="nameLabel" destination="oGI-eW-D2b" id="iXq-vg-qrm"/>
+                        <outlet property="nightActivityCount" destination="YSu-xb-gzE" id="ytZ-6B-Zpj"/>
+                        <segue destination="jUq-gC-fbG" kind="show" identifier="toMorning" id="qfd-9c-B4R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0GJ-K0-qVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -725,74 +760,117 @@ Nature</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meditation " translatesAutoresizingMaskIntoConstraints="NO" id="vfq-bF-JsY">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="meditation " translatesAutoresizingMaskIntoConstraints="NO" id="vfq-bF-JsY">
                                 <rect key="frame" x="0.0" y="79" width="414" height="253.00000000000023"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vXC-Yn-G3B">
-                                <rect key="frame" x="0.0" y="342" width="414" height="471"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="p7H-OK-BV9">
-                                    <size key="itemSize" width="408" height="127"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="QQ5-Og-SuJ">
-                                        <rect key="frame" x="3" y="0.0" width="408" height="127"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="408" height="127"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b9s-d6-WNl" customClass="CardUIView" customModule="Chabit_1_0" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="-1" width="360" height="128"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                            <real key="value" value="10"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                            <real key="value" value="5"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                            <real key="value" value="5"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                            <size key="value" width="1" height="1"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderSet">
-                                                            <real key="value" value="3"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                            </subviews>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbg-nK-eUc">
+                                <rect key="frame" x="20" y="384" width="374" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.32781285049999997" green="0.71963119509999995" blue="0.83139020200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="qEK-Gj-SJ5" kind="show" id="mmq-jc-2nN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Rs-cp-4X8">
+                                <rect key="frame" x="58" y="419" width="21" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Preparing for Meditation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNh-8f-PhX">
+                                <rect key="frame" x="98" y="433" width="259" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hb4-j2-Fl6">
+                                <rect key="frame" x="20" y="556" width="374" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.32781285049999997" green="0.71963119509999995" blue="0.83139020200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="icd-BX-f8h" kind="show" id="j6k-KK-zaJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIH-Jl-Hwb">
+                                <rect key="frame" x="58" y="591" width="32" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meditating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09p-Vq-OSB">
+                                <rect key="frame" x="98" y="605" width="116" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="bRH-KR-ibY" firstAttribute="bottom" secondItem="vXC-Yn-G3B" secondAttribute="bottom" id="ATH-eS-XUh"/>
-                            <constraint firstItem="bRH-KR-ibY" firstAttribute="bottom" secondItem="vfq-bF-JsY" secondAttribute="bottom" constant="481.00000000000023" id="Etn-9Z-cfD"/>
-                            <constraint firstItem="vfq-bF-JsY" firstAttribute="top" secondItem="V53-J5-Bws" secondAttribute="topMargin" constant="-9" id="EzE-RQ-thv"/>
-                            <constraint firstItem="vXC-Yn-G3B" firstAttribute="top" secondItem="vfq-bF-JsY" secondAttribute="bottom" constant="10" id="shB-Wt-RVf"/>
-                            <constraint firstItem="vXC-Yn-G3B" firstAttribute="leading" secondItem="bRH-KR-ibY" secondAttribute="leading" id="tVX-eE-Xnw"/>
-                            <constraint firstItem="bRH-KR-ibY" firstAttribute="trailing" secondItem="vXC-Yn-G3B" secondAttribute="trailing" id="wlI-iX-lun"/>
-                            <constraint firstItem="bRH-KR-ibY" firstAttribute="trailing" secondItem="vfq-bF-JsY" secondAttribute="trailing" id="xIs-Yk-Pt1"/>
-                            <constraint firstItem="vfq-bF-JsY" firstAttribute="leading" secondItem="bRH-KR-ibY" secondAttribute="leading" id="yUb-UK-PVf"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bRH-KR-ibY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Meditation" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="never" id="eJz-qH-rya">
-                        <barButtonItem key="backBarButtonItem" title="Home" id="uRA-wn-kuk"/>
+                    <navigationItem key="navigationItem" title="Meditation" largeTitleDisplayMode="never" id="eJz-qH-rya">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="7l3-0r-tBr"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="buttonMeditating" destination="Hb4-j2-Fl6" id="1bn-zk-RQh"/>
+                        <outlet property="buttonPrepare" destination="vbg-nK-eUc" id="Gkt-UK-OMU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pm1-We-kWR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2960.8695652173915" y="2929.6875"/>
+            <point key="canvasLocation" x="2957" y="3680"/>
+        </scene>
+        <!--Preparation 1-->
+        <scene sceneID="lYu-aL-R8e">
+            <objects>
+                <viewController id="qEK-Gj-SJ5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xvl-Xv-8vv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Think about what you want to achieve with your meditation." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rTY-Wj-6KZ">
+                                <rect key="frame" x="87" y="189" width="240" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zyr-jA-kdd">
+                                <rect key="frame" x="87" y="381" width="240" height="147"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">if your only goal is to spend a few minutes every day being present in your body without worrying about everything you have to do, that’s reason enough to meditate.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ve7-2C-O5V">
+                                <rect key="frame" x="87" y="358" width="240" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HU3-TO-sBy" customClass="CustomButtonMeditation" customModule="Chabit_1_0" customModuleProvider="target">
+                                <rect key="frame" x="57" y="670" width="300" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="cdG-fW-xPc" kind="show" id="eu1-u6-5Pf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32781285049999997" green="0.71963119509999995" blue="0.83139020200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="g3S-l1-XAQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Preparation 1" id="Zby-A7-Oy8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tp5-Ff-ySg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3876.811594202899" y="3679.6875"/>
         </scene>
         <!--Sound of Nature-->
         <scene sceneID="Xy4-Kg-rMv">
@@ -1060,7 +1138,7 @@ The stress is calculated from the average of Heart Rate Variability (HRV) which 
         <scene sceneID="tOd-1g-1lh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fkz-Hc-czO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="uiy-XQ-Tzq"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home-selected-25px" selectedImage="home-selected-25px" id="uiy-XQ-Tzq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="q5S-on-Ztb">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -1079,7 +1157,7 @@ The stress is calculated from the average of Heart Rate Variability (HRV) which 
         <scene sceneID="bhC-3G-v1M">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CRo-Kw-44P" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Setting" id="dnZ-3b-5Nn"/>
+                    <tabBarItem key="tabBarItem" title="Setting" image="settings-selected-25px" selectedImage="settings-selected-25px" id="dnZ-3b-5Nn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Hdy-Qu-DWo">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -1110,7 +1188,7 @@ The stress is calculated from the average of Heart Rate Variability (HRV) which 
                                 <rect key="frame" x="0.0" y="88" width="414" height="295"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1t2-7x-biu">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="morningActivities" translatesAutoresizingMaskIntoConstraints="NO" id="1t2-7x-biu">
                                         <rect key="frame" x="144" y="84" width="126" height="126"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -1138,7 +1216,7 @@ morning for a better whole day mood!</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X2u-D6-oa2">
-                                <rect key="frame" x="0.0" y="420" width="414" height="393"/>
+                                <rect key="frame" x="0.0" y="420" width="414" height="476"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -1164,6 +1242,7 @@ morning for a better whole day mood!</string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="iconActivityImage" destination="1t2-7x-biu" id="blv-tb-TsU"/>
                         <outlet property="tableView" destination="X2u-D6-oa2" id="cZG-M0-Q64"/>
                         <outlet property="viewImage" destination="lMw-Ry-qpo" id="A4z-hd-teo"/>
                         <segue destination="CWg-0r-OZh" kind="show" identifier="todAddItem" id="MQW-uS-VQj"/>
@@ -1171,12 +1250,12 @@ morning for a better whole day mood!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ssV-Kn-N5w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4241" y="2133"/>
+            <point key="canvasLocation" x="4240.579710144928" y="2132.8125"/>
         </scene>
         <!--On Boarding View Controller-->
         <scene sceneID="cCq-A8-aVt">
             <objects>
-                <viewController id="oz6-Fd-fOa" customClass="OnBoardingViewController" customModule="Chabit_1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnBoarding" id="oz6-Fd-fOa" customClass="OnBoardingViewController" customModule="Chabit_1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wdG-yv-FjY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1415,7 +1494,7 @@ Drinking one glass of water right after waking up will make your mind more fresh
         <scene sceneID="7i9-rZ-ffG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ay7-B0-d6Z" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Progress" id="rhi-1r-9CV"/>
+                    <tabBarItem key="tabBarItem" title="Progress" image="progress-selected-25" selectedImage="progress-selected-25" id="rhi-1r-9CV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="nOg-cx-Pnr">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -1450,6 +1529,7 @@ Drinking one glass of water right after waking up will make your mind more fresh
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
+                                    <action selector="onBoardingSet:" destination="R3V-eX-Ggo" eventType="touchUpInside" id="eOz-qI-BJN"/>
                                     <segue destination="TVj-v3-tdC" kind="show" identifier="nextHealthkitSegue" id="ViA-uZ-Zro"/>
                                 </connections>
                             </button>
@@ -1477,11 +1557,642 @@ Drinking one glass of water right after waking up will make your mind more fresh
             </objects>
             <point key="canvasLocation" x="745" y="0.0"/>
         </scene>
+        <!--Preparation 2-->
+        <scene sceneID="d1y-pT-vyk">
+            <objects>
+                <viewController id="cdG-fW-xPc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1eS-FC-IaO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Find a distraction-free area." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JQl-WW-eFu">
+                                <rect key="frame" x="87" y="189" width="240" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDr-KG-PjH" customClass="CustomButtonMeditation" customModule="Chabit_1_0" customModuleProvider="target">
+                                <rect key="frame" x="57" y="677" width="300" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="gWu-XF-TTh" kind="show" id="dxP-cF-kbE"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1JV-61-MF6">
+                                <rect key="frame" x="87" y="381" width="240" height="214"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Especially when you’re just starting out, it’s important to clear your environment of distracting sensations. Turn off the TV and radio, close your windows against the street sounds outside, and close your door to noisy roommates.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="grD-xZ-CCO">
+                                <rect key="frame" x="87" y="358" width="240" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32781285049999997" green="0.71963119509999995" blue="0.83139020200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="GO0-Wa-Gr6"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Preparation 2" id="3sF-gD-fs9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yf3-wC-d7d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4578" y="3680"/>
+        </scene>
+        <!--Preparation 3-->
+        <scene sceneID="gb7-lD-Sc2">
+            <objects>
+                <viewController id="gWu-XF-TTh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OSO-gT-WVQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Use a meditation cushion." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GtI-bT-s8O">
+                                <rect key="frame" x="87" y="189" width="240" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jql-CQ-m53">
+                                <rect key="frame" x="87" y="381" width="240" height="236"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Meditation cushions are also known as zafus. A zafu is a circular cushion that allows you to sit on the ground while meditating. If you don’t have a zafu, any old pillow or sofa cushion will do to keep you from getting sore during long stretches of cross-legged sitting.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nb0-Hi-0oR">
+                                <rect key="frame" x="87" y="358" width="240" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTG-4i-YS9" customClass="CustomButtonMeditation" customModule="Chabit_1_0" customModuleProvider="target">
+                                <rect key="frame" x="57" y="670" width="300" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="KRx-DS-i1r" kind="show" id="5En-fJ-3vU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32781285049999997" green="0.71963119509999995" blue="0.83139020200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="YFU-8P-r6g"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Preparation 3" id="HN3-9L-Kiu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NzQ-G4-mne" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5233" y="3680"/>
+        </scene>
+        <!--Preparation 4-->
+        <scene sceneID="VOl-5H-O8S">
+            <objects>
+                <viewController id="KRx-DS-i1r" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="otA-6e-dEa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Wear comfortable clothes." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eo8-d6-YRq">
+                                <rect key="frame" x="87" y="189" width="240" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="riD-xu-2qn">
+                                <rect key="frame" x="87" y="381" width="240" height="236"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">You don’t want anything to pull you out of your meditative thinking, so avoid restrictive clothing that might pull on you, like jeans or tight pants. Think about what you might wear to exercise or to sleep in — those types of loose, breathable clothes are your best bet.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Nl-yY-2lS">
+                                <rect key="frame" x="87" y="358" width="240" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmV-ty-VBO" customClass="CustomButtonMeditation" customModule="Chabit_1_0" customModuleProvider="target">
+                                <rect key="frame" x="57" y="676" width="300" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="i0J-CV-u2t" kind="show" id="Fqw-ir-TFR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32781285049999997" green="0.71963119509999995" blue="0.83139020200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="trv-ig-5op"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Preparation 4" id="JIC-Nk-eW0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q7s-X2-lor" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5891" y="3680"/>
+        </scene>
+        <!--Preparation 5-->
+        <scene sceneID="bQd-fh-fa5">
+            <objects>
+                <viewController id="i0J-CV-u2t" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d3j-J2-0C3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Choose a time when you’re comfortable." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NI3-E3-HYK">
+                                <rect key="frame" x="87" y="189" width="240" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bZp-Ne-UaH">
+                                <rect key="frame" x="91" y="381" width="233" height="148"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">When you’re starting out, meditate when you already feel relaxed — perhaps first thing in the morning, or after you’ve had to unwind after school or work.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2dV-5J-OXs">
+                                <rect key="frame" x="87" y="358" width="240" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVg-bf-GjJ" customClass="CustomButtonMeditation" customModule="Chabit_1_0" customModuleProvider="target">
+                                <rect key="frame" x="57" y="670" width="300" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="AZn-Vz-EDO" kind="show" id="6Qv-zO-r0t"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32781285049999997" green="0.71963119509999995" blue="0.83139020200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="djJ-pq-YtI"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Preparation 5" id="sge-1w-gNE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s5J-wu-2Fq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6568" y="3680"/>
+        </scene>
+        <!--Preparation 6-->
+        <scene sceneID="AI3-4c-f1D">
+            <objects>
+                <viewController id="AZn-Vz-EDO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a3Y-eH-yE7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Have a timer at hand. " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="c4L-qm-SA5">
+                                <rect key="frame" x="87" y="189" width="240" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GLN-gw-fxm">
+                                <rect key="frame" x="87" y="381" width="240" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Set a timer for the length of time you wish to meditate — whether 10 minutes or an hour. Your phone may have a built-in timer on it, or you can find many websites and apps that will time your sessions for you.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tom-5x-Vev">
+                                <rect key="frame" x="87" y="358" width="240" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32781285049999997" green="0.71963119509999995" blue="0.83139020200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="OWp-sZ-ivb"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Preparation 6" id="2wX-M1-ACQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mof-V7-TK1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7265" y="3680"/>
+        </scene>
+        <!--Step 1-->
+        <scene sceneID="6w5-ca-Bg2">
+            <objects>
+                <viewController id="icd-BX-f8h" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g6h-VR-FxO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Sit on your cushion or chair with a straight back." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="f68-li-pi0">
+                                <rect key="frame" x="87" y="189" width="240" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aOH-A7-RqD">
+                                <rect key="frame" x="87" y="381" width="240" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">he upright posture helps you to concentrate on your breathing as you purposefully inhale and exhale. If you’re sitting in a chair with a back, try not to lean back against it or slouch. Stay as erect as possible.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pj4-bw-EMl">
+                                <rect key="frame" x="87" y="358" width="240" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3d-JO-uHJ" customClass="CustomButtonMeditation" customModule="Chabit_1_0" customModuleProvider="target">
+                                <rect key="frame" x="57" y="673" width="300" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="AZv-Nb-uXX" kind="show" id="Z9L-fS-NKf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32781285049999997" green="0.71963119509999995" blue="0.83139020200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="Iqc-kF-Vk1"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Step 1" id="SA4-N1-KG4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SoA-bJ-jd3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3948" y="4445"/>
+        </scene>
+        <!--Step 2-->
+        <scene sceneID="XXM-Wj-ndY">
+            <objects>
+                <viewController id="AZv-Nb-uXX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CmJ-In-orD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Don’t fret about what to do with your hands." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="W7C-ay-fsA">
+                                <rect key="frame" x="87" y="189" width="240" height="144"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I4a-M1-8N4">
+                                <rect key="frame" x="87" y="381" width="240" height="236"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">In the media, we often see people holding their hands at their knees when meditating, but if that’s uncomfortable for you, don’t worry about it. You can fold them in your lap, let them hang at your sides — whatever allows you to clear your mind and concentrate on your breathing.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Prb-Z5-VPN">
+                                <rect key="frame" x="87" y="358" width="240" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbl-ny-o3W" customClass="CustomButtonMeditation" customModule="Chabit_1_0" customModuleProvider="target">
+                                <rect key="frame" x="57" y="677" width="300" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="yOb-dQ-27X" kind="show" id="RNM-9s-cv7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32781285049999997" green="0.71963119509999995" blue="0.83139020200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="dhI-Hi-lxf"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Step 2" id="fPm-ZI-Nmu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bKL-Af-Vag" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4648" y="4445"/>
+        </scene>
+        <!--Step 3-->
+        <scene sceneID="202-cf-1tU">
+            <objects>
+                <viewController id="yOb-dQ-27X" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jwu-fG-YjQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Tilt your chin as though you’re looking downward. " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8Hv-3i-zwS">
+                                <rect key="frame" x="87" y="189" width="240" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3EG-h8-Qxa">
+                                <rect key="frame" x="87" y="381" width="240" height="236"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">It doesn’t matter if your eyes are opened or closed when you meditate, though many people find it easier to block out visual distractions with closed eyes. Either way, tilting your head as though you’re looking down helps open up the chest and ease your breathing.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="id7-8Y-guQ">
+                                <rect key="frame" x="87" y="358" width="240" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPV-C8-rNP" customClass="CustomButtonMeditation" customModule="Chabit_1_0" customModuleProvider="target">
+                                <rect key="frame" x="57" y="683" width="300" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="W4o-Yn-RAa" kind="show" id="s3M-sy-XoX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32781285049999997" green="0.71963119509999995" blue="0.83139020200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="vyq-IR-7PY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Step 3" id="qB2-rH-Gh1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="azG-Ii-PNf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5303" y="4445"/>
+        </scene>
+        <!--Step 4-->
+        <scene sceneID="FGW-zb-Vp2">
+            <objects>
+                <viewController id="W4o-Yn-RAa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w2q-XW-iWz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Set your timer." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9UN-XI-XLs">
+                                <rect key="frame" x="87" y="189" width="240" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wRd-Sd-BkY">
+                                <rect key="frame" x="87" y="381" width="240" height="280"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">When you’re in a comfortable position and are ready to get started, set your timer for however long you’d like to meditate. Don’t feel any pressure to reach an hour-long transcendental state during your first week. Start small with 3-5 minute sessions, and work your way up to half an hour, or even longer if you’d like</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hCu-gj-E6j">
+                                <rect key="frame" x="87" y="358" width="240" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJh-2V-w9G" customClass="CustomButtonMeditation" customModule="Chabit_1_0" customModuleProvider="target">
+                                <rect key="frame" x="57" y="692" width="300" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="OgK-Nd-290" kind="show" id="4Rj-v8-1zB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32781285049999997" green="0.71963119509999995" blue="0.83139020200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="E2G-3F-ROK"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Step 4" id="eHv-yb-cZb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Qh-3t-R6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5961" y="4445"/>
+        </scene>
+        <!--Step 5-->
+        <scene sceneID="gWe-3h-jdY">
+            <objects>
+                <viewController id="OgK-Nd-290" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9ut-w4-FRT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Keep your mouth closed as you breathe." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jdL-Mp-UV8">
+                                <rect key="frame" x="87" y="189" width="240" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="06M-r4-O3D">
+                                <rect key="frame" x="91" y="381" width="233" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">You should both inhale and exhale through your nose when meditating. However, make sure your jaw muscles are relaxed, even though your mouth is closed. Don’t clench your jaws or grind your teeth; simply relax.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="000-pV-dof">
+                                <rect key="frame" x="87" y="358" width="240" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fup-jR-a6R" customClass="CustomButtonMeditation" customModule="Chabit_1_0" customModuleProvider="target">
+                                <rect key="frame" x="57" y="673" width="300" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="yFM-mS-ils" kind="show" id="Ko1-PF-Yzj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32781285049999997" green="0.71963119509999995" blue="0.83139020200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="e8d-Hq-Dll"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Step 5" id="Bpp-nd-nM1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zfC-85-i2g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6638" y="4445"/>
+        </scene>
+        <!--Step 6-->
+        <scene sceneID="pzd-dQ-7Tq">
+            <objects>
+                <viewController id="yFM-mS-ils" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QcE-2P-9eX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Focus on your breathing." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vNt-b8-YCh">
+                                <rect key="frame" x="87" y="189" width="240" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4uH-7i-TTd">
+                                <rect key="frame" x="87" y="381" width="240" height="214"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">This is what meditation’s all about. Instead of trying not to think about the things that might stress you out on a day-to-day basis, give yourself something positive to focus on: your breath</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Foz-IG-g6S">
+                                <rect key="frame" x="87" y="358" width="240" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0FK-VW-T46" customClass="CustomButtonMeditation" customModule="Chabit_1_0" customModuleProvider="target">
+                                <rect key="frame" x="57" y="667" width="300" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="yHs-JM-kVg" kind="show" id="gJu-ii-exx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32781285049999997" green="0.71963119509999995" blue="0.83139020200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="4dZ-sG-y1Y"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Step 6" id="l4a-gl-XMF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9gE-0D-kNV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7338" y="4444"/>
+        </scene>
+        <!--Step 7-->
+        <scene sceneID="BgJ-wI-Mey">
+            <objects>
+                <viewController id="yHs-JM-kVg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hT0-yt-kHm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Observe your breath, but don’t analyze it." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="18R-YD-LoJ">
+                                <rect key="frame" x="87" y="189" width="240" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="66a-hx-ili">
+                                <rect key="frame" x="87" y="381" width="240" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">The goal is to be present within each breath, not to be able to describe it. Don’t worry about remembering what you’re feeling, or being able to explain the experience at a later time.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xaY-PW-l05">
+                                <rect key="frame" x="87" y="358" width="240" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14E-R3-LpZ" customClass="CustomButtonMeditation" customModule="Chabit_1_0" customModuleProvider="target">
+                                <rect key="frame" x="57" y="670" width="300" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="3l3-w5-D6c" kind="show" id="wWM-Cw-BIN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32781285049999997" green="0.71963119509999995" blue="0.83139020200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="0nL-Qf-03b"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Step 7" id="DIp-10-hjC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="22S-U5-dx1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7993" y="4444"/>
+        </scene>
+        <!--Step 8-->
+        <scene sceneID="Mhx-Ek-nM5">
+            <objects>
+                <viewController id="3l3-w5-D6c" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F3U-Up-rbK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Bring your attention back to your breath if it wanders." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DbJ-uF-MGC">
+                                <rect key="frame" x="87" y="189" width="240" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6rD-bQ-p8b">
+                                <rect key="frame" x="92" y="381" width="230.5" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Whenever you notice the outside world creeping in, don’t panic and try to ignore them. Instead, gently nudge your focus back to the sensation of your breath in your body, and let other thoughts fall away again.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="atH-ku-yQ2">
+                                <rect key="frame" x="87" y="358" width="240" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2d-YG-99u" customClass="CustomButtonMeditation" customModule="Chabit_1_0" customModuleProvider="target">
+                                <rect key="frame" x="57" y="673" width="300" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ueg-25-FKG" kind="show" id="bXH-z4-RTC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32781285049999997" green="0.71963119509999995" blue="0.83139020200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="PEA-Av-fpn"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Step 8" id="y85-xh-0eN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4h3-dw-JsT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8651" y="4444"/>
+        </scene>
+        <!--Step 9-->
+        <scene sceneID="Vzx-Lh-Zbh">
+            <objects>
+                <viewController id="Ueg-25-FKG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q3w-Vu-2hP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Don’t be too hard on yourself." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="96t-vq-aF0">
+                                <rect key="frame" x="87" y="189" width="240" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ibP-fG-ui6">
+                                <rect key="frame" x="91" y="381" width="233" height="214"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Furthermore, don’t expect your meditation practice to change your life overnight. Mindfulness takes time to exert its influence. Keep coming back to meditation every day for at least a few minutes, lengthening your sessions when possible.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y3d-Ff-FD3">
+                                <rect key="frame" x="87" y="358" width="240" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32781285049999997" green="0.71963119509999995" blue="0.83139020200000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="PPP-HJ-9Ps"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Step 9" id="DLd-GI-N1y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u8Q-Vb-4iN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9328" y="4444"/>
+        </scene>
     </scenes>
     <resources>
         <image name="afternoonActivities" width="132" height="132"/>
         <image name="alarm" width="512" height="512"/>
         <image name="healthkit" width="128" height="128"/>
+        <image name="home-selected-25px" width="25" height="25"/>
         <image name="meditation" width="132" height="130"/>
         <image name="meditation " width="1304" height="778"/>
         <image name="morningActivities" width="126" height="112"/>
@@ -1489,6 +2200,8 @@ Drinking one glass of water right after waking up will make your mind more fresh
         <image name="natureMusic" width="103" height="123"/>
         <image name="nightActivities" width="116" height="112"/>
         <image name="play_ic" width="46" height="46"/>
+        <image name="progress-selected-25" width="25" height="25"/>
+        <image name="settings-selected-25px" width="25" height="25"/>
         <image name="smilingGlass" width="164" height="261"/>
         <image name="stop_ic" width="150" height="150"/>
         <image name="time_ic" width="16" height="16"/>
@@ -1496,4 +2209,5 @@ Drinking one glass of water right after waking up will make your mind more fresh
         <image name="user-1" width="512" height="512"/>
         <image name="water" width="512" height="512"/>
     </resources>
+    <color key="tintColor" red="0.1176470588" green="0.74117647060000003" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

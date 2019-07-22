@@ -109,7 +109,7 @@ class YourEmotionViewController: UIViewController {
                     print(" heartRate \(countHR)")
                     
                     DispatchQueue.main.async {
-                        self.hearthRateLabel.text = String(format: "❤️ HeartRate: %.1f ms", countHR)
+                        self.hearthRateLabel.text = String(format: "❤️ HeartRate: %.1f bpm ", countHR)
                     }
                 }
             }

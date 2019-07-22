@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		989F90A320DA8489F5989CD5 /* Pods_Chabit_1_0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE760CF90C32B5A91BAE047 /* Pods_Chabit_1_0.framework */; };
+		C3DB9CF322E5678100A17C60 /* CustomButtonMeditation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DB9CF222E5678100A17C60 /* CustomButtonMeditation.swift */; };
 		EB0F59D022E0A75F00CF0BB8 /* SetupNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F59CD22E0A75F00CF0BB8 /* SetupNameViewController.swift */; };
 		EB0F59D122E0A75F00CF0BB8 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F59CE22E0A75F00CF0BB8 /* CustomButton.swift */; };
 		EB0F59D222E0A75F00CF0BB8 /* SetupReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0F59CF22E0A75F00CF0BB8 /* SetupReminderViewController.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		1F66B4B0BBE27E51C3C89558 /* Pods-Chabit-1.0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chabit-1.0.debug.xcconfig"; path = "Target Support Files/Pods-Chabit-1.0/Pods-Chabit-1.0.debug.xcconfig"; sourceTree = "<group>"; };
 		8DE760CF90C32B5A91BAE047 /* Pods_Chabit_1_0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chabit_1_0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3DB9CF222E5678100A17C60 /* CustomButtonMeditation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonMeditation.swift; sourceTree = "<group>"; };
 		EB0F59CD22E0A75F00CF0BB8 /* SetupNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupNameViewController.swift; sourceTree = "<group>"; };
 		EB0F59CE22E0A75F00CF0BB8 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		EB0F59CF22E0A75F00CF0BB8 /* SetupReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupReminderViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				EB0F59DD22E1602900CF0BB8 /* SoundOfNatureViewController.swift */,
 				EBB0A7F122E30EEE00256399 /* AddItemViewController.swift */,
 				EBD4C3A122E4D61200CB4091 /* HealthKitPermissionViewController.swift */,
+				C3DB9CF222E5678100A17C60 /* CustomButtonMeditation.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				EBF81C8022E07A3C00BBE4CF /* Habit.swift in Sources */,
 				EBF81C7E22E07A3600BBE4CF /* CardUIView.swift in Sources */,
 				EB0F59DA22E0E6FB00CF0BB8 /* CardView.swift in Sources */,
+				C3DB9CF322E5678100A17C60 /* CustomButtonMeditation.swift in Sources */,
 				EBF81C7922E07A2B00BBE4CF /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,13 +514,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Chabit-1.0/Chabit-1.0.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 46X9JWL5UU;
+				DEVELOPMENT_TEAM = MTU6Z4VFLV;
 				INFOPLIST_FILE = "Chabit-1.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fauzify.Chabit-1-0";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fauzify.Chabit-1-0-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -530,13 +534,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Chabit-1.0/Chabit-1.0.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 46X9JWL5UU;
+				DEVELOPMENT_TEAM = MTU6Z4VFLV;
 				INFOPLIST_FILE = "Chabit-1.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fauzify.Chabit-1-0";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fauzify.Chabit-1-0-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

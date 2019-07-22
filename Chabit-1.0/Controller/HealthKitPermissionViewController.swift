@@ -35,4 +35,11 @@ class HealthKitPermissionViewController: UIViewController {
             }
         }
     }
+    
+    
+    @IBAction func onBoardingSet(_ sender: UIButton) {
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(true, forKey: "onBoardingComplete")
+        userDefaults.synchronize()
+    }
 }

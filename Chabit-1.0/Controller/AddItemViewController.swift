@@ -13,28 +13,48 @@ import CoreData
 class AddItemViewController: UIViewController {
     
     
+    var activityTime: String?
+    
+    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    var morningActivityAllList = [MorningActivityItem]()
+    lazy var morningActivityList: [MorningActivity] = {
+        
+        if activityTime == "morning"{
+            return [MorningActivity]()
+        }
+        return [MorningActivity]()
+    }()
+    
+    lazy var afternoonActivityList: [AfternoonActivity] = {
+        if activityTime == "afternoon"{
+            return [AfternoonActivity]()
+        }
+        return [AfternoonActivity]()
+    }()
+    
+    lazy var nightActivityList: [NightActivity] = {
+        if activityTime == "night"{
+            return [NightActivity]()
+        }
+        return [NightActivity]()
+    }()
     
 
     @IBOutlet weak var addItemTableView: UITableView!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!)
         
-        loadData()
+        loadDataSpecific()
         
         addItemTableView.delegate = self
         addItemTableView.dataSource = self
         addItemTableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomTableViewCell")
         
         
-        loadStaticItem()
         
         let searchBarController =  UISearchController(searchResultsController: nil)
         
@@ -42,45 +62,56 @@ class AddItemViewController: UIViewController {
         
         navigationItem.searchController?.searchBar.delegate =  self
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         
-        addItemTableView.rowHeight = UITableView.automaticDimension
-        addItemTableView.estimatedRowHeight = 600
-        
+        tabBarController?.tabBar.isHidden = true
+        self.title = "add " + activityTime! + " activity"
         
         
         
     }
     
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
+    // MARK : - function for core data
     
     func saveData(){
         try? context.save()
-        loadData()
+        //loadData()
     }
     
-    func loadData(){
+    func loadDataSpecific(){
         
-        let request :  NSFetchRequest<MorningActivityItem> = MorningActivityItem.fetchRequest()
-        
-        let descriptors : NSSortDescriptor = NSSortDescriptor(key: "activityName", ascending: true)
-        
-        request.sortDescriptors = [descriptors]
-        
-        
-        do{
-            morningActivityAllList =  try context.fetch(request)
-        }catch{
-            print("failed to load data \(error)")
+        if activityTime == "morning"{
+            
+            let request: NSFetchRequest<MorningActivity> = MorningActivity.fetchRequest()
+            
+            do{
+                morningActivityList = try context.fetch(request)
+            }catch{
+                print("ERROR LOAD MORNING DATA \(error)")
+            }
+            
+        }else if activityTime == "afternoon"{
+            
+            let request: NSFetchRequest<AfternoonActivity> = AfternoonActivity.fetchRequest()
+            
+            do{
+                afternoonActivityList = try context.fetch(request)
+            }catch{
+                print("ERROR LOAD AFTERNOON DATA \(error)")
+            }
+            
+        }else if activityTime == "night" {
+            let request: NSFetchRequest<NightActivity> = NightActivity.fetchRequest()
+            
+            do{
+                nightActivityList = try context.fetch(request)
+            }catch{
+                print("ERROR LOAD NIGHT DATA \(error)")
+            }
         }
         
         addItemTableView.reloadData()
@@ -90,30 +121,7 @@ class AddItemViewController: UIViewController {
     
     
     
-    func loadStaticItem(){
-        if morningActivityAllList.count == 0 {
-            
-            let data = HealthlyHabitsData()
-            
-            for i in 0..<data.data.count{
-                
-                let newItem = MorningActivityItem(context: context)
-                
-                newItem.activityName = data.data[i]
-                newItem.isAdd = false
-                newItem.isDone = false
-                
-                saveData()
-                
-            }
-            
-        }
-    }
-    
-    
-    
     @IBAction func addYoursButtonTapped(_ sender: Any) {
-        
         
         //create the local variable that handle the alert text field
         var textField = UITextField()
@@ -129,13 +137,30 @@ class AddItemViewController: UIViewController {
             //set the textfielnd popup if they are not blank
             if textField.text! != "" {
                 
+                if self.activityTime == "morning"{
+                    let newItem = MorningActivity(context: self.context)
+                    newItem.morningName = textField.text!
+                    newItem.morningIsAdd = false
+                    newItem.morningIsDone = false
+                    newItem.morningDate = Date()
+                }else if self.activityTime == "afternoon"{
+                    let newItem = AfternoonActivity(context: self.context)
+                    newItem.afternoonName = textField.text!
+                    newItem.afternoonIsAdd = false
+                    newItem.afternoonIsDone = false
+                    newItem.afternoonDate = Date()
+                }else if self.activityTime == "night"{
+                    let newItem = NightActivity(context: self.context)
+                    newItem.nightName = textField.text!
+                    newItem.nightIsAdd = false
+                    newItem.nightIsDone = false
+                    newItem.nightDate = Date()
+                }
                 
-                let newItem = MorningActivityItem(context: self.context)
-                newItem.activityName = textField.text!
-                newItem.isDone = false
-                newItem.isAdd = false
+                
                 
                 self.saveData()
+                self.loadDataSpecific()
                 
             }
             
@@ -168,53 +193,8 @@ class AddItemViewController: UIViewController {
         present(alert, animated: true, completion: nil)
         
         addItemTableView.reloadData()
-        loadData()
+        loadDataSpecific()
         
-        
-        
-        
-        
-        //
-        //                print("YOU PRESSED THE ADD BUTTON")
-        //
-        //
-        //
-        //                let newItem = MorningActivityItem(context: self.context)
-        //
-        //                let alert = UIAlertController(title: "Add your Activity list", message: "fill the text here", preferredStyle: .alert)
-        //
-        //
-        //
-        //
-        //                let action = UIAlertAction(title: "add", style: .default) { (alert) in
-        //
-        //                    if textField.text != ""{
-        //
-        //                        var textField = UITextField()
-        //
-        //                        newItem.activityName = textField.text!
-        //                        newItem.isDone = false
-        //
-        //                        self.saveData()
-        //                        self.tableView.reloadData()
-        //
-        //                        //debug
-        //                        print("YANG DITULIS DI TEXT FIELD = \(newItem.activityName!)")
-        //                        print("YOU PRESSED THE ACTION THEN SAVED THE DATA")
-        //                    }
-        //
-        //
-        //                }
-        //
-        //                alert.addTextField { (textFieldResult) in
-        //
-        //                    textFieldResult.placeholder = "Add yours here"
-        //                    textField = textFieldResult
-        //                }
-        //
-        //                alert.addAction(action)
-        //                present(alert, animated: true)
-        //
     }
     
     
@@ -230,40 +210,88 @@ extension AddItemViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return morningActivityAllList.count
+        if activityTime == "morning"{
+            return morningActivityList.count
+        }else if activityTime == "afternoon"{
+            return afternoonActivityList.count
+        }else if activityTime == "night"{
+            return nightActivityList.count
+        }
+        
+        return 0
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = addItemTableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as! CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as! CustomTableViewCell
         
-        cell.cellTextLabel.text = morningActivityAllList[indexPath.row].activityName
-        cell.accessoryType = morningActivityAllList[indexPath.row].isAdd ? .checkmark : .none
         
+        if activityTime == "morning"{
+            cell.cellTextLabel.text = morningActivityList[indexPath.row].morningName
+            let dateFormater = DateFormatter()
+            dateFormater.dateFormat = "dd-MM-yyyy"
+            cell.minuteLabel.text = dateFormater.string(from: morningActivityList[indexPath.row].morningDate! as Date)
+            cell.accessoryType = morningActivityList[indexPath.row].morningIsAdd ? .checkmark : .none
+            return cell
+            
+        }else if activityTime == "afternoon"{
+            cell.cellTextLabel.text = afternoonActivityList[indexPath.row].afternoonName!
+            let dateFormater = DateFormatter()
+            dateFormater.dateFormat = "dd-MM-yyyy"
+            cell.minuteLabel.text = dateFormater.string(from: afternoonActivityList[indexPath.row].afternoonDate! as Date)
+            cell.accessoryType = afternoonActivityList[indexPath.row].afternoonIsAdd ? .checkmark : .none
+            return cell
+            
+        }else if activityTime == "night"{
+            cell.cellTextLabel.text = nightActivityList[indexPath.row].nightName!
+            let dateFormater = DateFormatter()
+            dateFormater.dateFormat = "dd-MM-yyyy"
+            cell.minuteLabel.text = dateFormater.string(from: nightActivityList[indexPath.row].nightDate! as Date)
+            cell.accessoryType = nightActivityList[indexPath.row].nightIsAdd ? .checkmark : .none
+            return cell
+        }
         
         return cell
-        
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        loadData()
+        loadDataSpecific()
         
-        let item = morningActivityAllList[indexPath.row]
-        
-        if item.isAdd == false{
-            
-            item.isAdd = true
-            tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
-            
-        }else{
-            item.isAdd = false
-            tableView.cellForRow(at: indexPath)?.accessoryType = .none
+        if activityTime == "morning"{
+            let item = morningActivityList[indexPath.row]
+            if item.morningIsAdd == false{
+                item.morningIsAdd = true
+                
+            }else{
+                item.morningIsAdd = false
+                
+            }
+        }else if activityTime == "afternoon"{
+            let item = afternoonActivityList[indexPath.row]
+            if item.afternoonIsAdd == false{
+                item.afternoonIsAdd = true
+                
+            }else{
+                item.afternoonIsAdd = false
+                
+            }
+        }else if activityTime == "night"{
+            let item = nightActivityList[indexPath.row]
+            if item.nightIsAdd == false{
+                item.nightIsAdd = true
+                
+            }else{
+                item.nightIsAdd = false
+                
+            }
             
         }
         
         saveData()
+        loadDataSpecific()
         
         tableView.reloadData()
         
@@ -275,24 +303,28 @@ extension AddItemViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete{
+            if activityTime == "morning"{
+                let commit = morningActivityList[indexPath.row]
+                context.delete(commit)
+                morningActivityList.remove(at: indexPath.row)
+            }else if activityTime == "afternoon"{
+                let commit = afternoonActivityList[indexPath.row]
+                context.delete(commit)
+                afternoonActivityList.remove(at: indexPath.row)
+            }else if activityTime == "night"{
+                let commit = nightActivityList[indexPath.row]
+                context.delete(commit)
+                nightActivityList.remove(at: indexPath.row)
+            }
             
-            let commit = morningActivityAllList[indexPath.row]
-            context.delete(commit)
-            morningActivityAllList.remove(at: indexPath.row)
+            
             
             tableView.deleteRows(at: [indexPath], with: .automatic)
             
-            //            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            //                self.saveData()
-            //            }
-            
-            
-            
-            DispatchQueue.main.async {
-                self.loadData()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self.saveData()
+                
             }
-            
             
         }
         
@@ -308,28 +340,61 @@ extension AddItemViewController : UISearchBarDelegate{
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text == "" {
-            loadData()
+            loadDataSpecific()
             //            DispatchQueue.main.async {
             //                searchBar.resignFirstResponder()
             //            }
         }else{
-            loadData()
-            let request: NSFetchRequest<MorningActivityItem> = MorningActivityItem.fetchRequest()
-            
-            let descriptors : NSSortDescriptor = NSSortDescriptor(key: "activityName", ascending: true)
-            
-            let predicate  = NSPredicate(format: "activityName CONTAINS[cd] %@", searchBar.text!)
-            
-            
-            request.predicate = predicate
-            request.sortDescriptors = [descriptors]
-            
-            //let request : NSFetchRequest<MorningActivityItem> = MorningActivityItem.fetchRequest()
-            
-            do{
-                morningActivityAllList =  try context.fetch(request)
-            }catch{
-                print("failed to load data \(error)")
+            loadDataSpecific()
+            if activityTime == "morning"{
+                let request: NSFetchRequest<MorningActivity> = MorningActivity.fetchRequest()
+                
+                let descriptors : NSSortDescriptor = NSSortDescriptor(key: "morningName", ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))
+                
+                let predicate  = NSPredicate(format: "morningName CONTAINS[cd] %@", searchBar.text!)
+                
+                
+                request.predicate = predicate
+                request.sortDescriptors = [descriptors]
+                
+                do{
+                    morningActivityList =  try context.fetch(request)
+                }catch{
+                    print("failed to load data \(error)")
+                }
+                
+            }else if activityTime == "afternoon"{
+                let request: NSFetchRequest<AfternoonActivity> = AfternoonActivity.fetchRequest()
+                
+                let descriptors : NSSortDescriptor = NSSortDescriptor(key: "afternoonName", ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))
+                
+                let predicate  = NSPredicate(format: "afternoonName CONTAINS[cd] %@", searchBar.text!)
+                
+                request.predicate = predicate
+                request.sortDescriptors = [descriptors]
+                
+                do{
+                    afternoonActivityList =  try context.fetch(request)
+                }catch{
+                    print("failed to load data \(error)")
+                }
+                
+            }else if activityTime == "night"{
+                let request: NSFetchRequest<NightActivity> = NightActivity.fetchRequest()
+                
+                let descriptors : NSSortDescriptor = NSSortDescriptor(key: "nightName", ascending: true, selector: #selector(NSString.localizedCaseInsensitiveCompare(_:)))
+                
+                let predicate  = NSPredicate(format: "nightName CONTAINS[cd] %@", searchBar.text!)
+                
+                
+                request.predicate = predicate
+                request.sortDescriptors = [descriptors]
+                
+                do{
+                    nightActivityList =  try context.fetch(request)
+                }catch{
+                    print("failed to load data \(error)")
+                }
             }
             
             addItemTableView.reloadData()
@@ -339,9 +404,11 @@ extension AddItemViewController : UISearchBarDelegate{
     
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        loadData()
+        loadDataSpecific()
     }
     
     
+    
+    
+    
 }
-

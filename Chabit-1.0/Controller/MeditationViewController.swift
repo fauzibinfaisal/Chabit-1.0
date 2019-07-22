@@ -9,10 +9,14 @@
 import UIKit
 
 class MeditationViewController: UIViewController {
-
+    @IBOutlet weak var buttonPrepare: UIButton!
+    @IBOutlet weak var buttonMeditating: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        buttonPrepare.layer.cornerRadius = 15
+        buttonMeditating.layer.cornerRadius = 15
+        
         // Do any additional setup after loading the view.
     }
     

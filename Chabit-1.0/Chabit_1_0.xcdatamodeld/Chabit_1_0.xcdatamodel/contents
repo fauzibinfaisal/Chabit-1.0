@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="MorningActivityItem" representedClassName="MorningActivityItem" syncable="YES" codeGenerationType="class">
-        <attribute name="activityName" attributeType="String" syncable="YES"/>
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="isAdd" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="isDone" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+    <entity name="AfternoonActivity" representedClassName=".AfternoonActivity" syncable="YES" codeGenerationType="class">
+        <attribute name="afternoonDate" optional="YES" attributeType="Date" usesScalarValueType="NO" customClassName="." syncable="YES"/>
+        <attribute name="afternoonIsAdd" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="afternoonIsDone" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="afternoonName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MorningActivity" representedClassName="MorningActivity" syncable="YES" codeGenerationType="class">
+        <attribute name="morningDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="morningIsAdd" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="morningIsDone" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="morningName" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="NightActivity" representedClassName=".NightActivity" syncable="YES" codeGenerationType="class">
+        <attribute name="nightDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="nightIsAdd" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nightIsDone" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nightName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="MorningActivityItem" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="MorningActivity" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="AfternoonActivity" positionX="-63" positionY="9" width="128" height="105"/>
+        <element name="NightActivity" positionX="-54" positionY="36" width="128" height="105"/>
     </elements>
 </model>

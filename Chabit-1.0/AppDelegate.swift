@@ -17,6 +17,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if !UserDefaults.standard.bool(forKey: "databaseMade"){
+            databaseMake()
+        }
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        var initialViewController = sb.instantiateViewController(withIdentifier: "OnBoarding")
+        
+        let userDefaults = UserDefaults.standard
+        
+        if userDefaults.bool(forKey: "onBoardingComplete"){
+            initialViewController = sb.instantiateViewController(withIdentifier: "MainApp")
+        }
+        
+        window?.rootViewController = initialViewController
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
@@ -87,6 +105,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    
+    func databaseMake(){
+        
+        let context = persistentContainer.viewContext
+        
+        let data = HealthlyHabitsData()
+        
+        for i in 0..<data.data.count{
+            
+            let morningNewItem = MorningActivity(context: context)
+            morningNewItem.morningName = data.data[i]
+            morningNewItem.morningDate = Date()
+            morningNewItem.morningIsAdd = false
+            morningNewItem.morningIsDone = false
+            if i == 0 || i == 1 || i == 2 {
+                morningNewItem.morningIsAdd = true
+            }
+            
+            
+            let afternoonNewItem = AfternoonActivity(context: context)
+            afternoonNewItem.afternoonName = data.data[i]
+            afternoonNewItem.afternoonDate = Date()
+            afternoonNewItem.afternoonIsAdd = false
+            afternoonNewItem.afternoonIsDone = false
+            if i == 3 || i == 4 || i == 5 {
+                afternoonNewItem.afternoonIsAdd = true
+            }
+            
+            
+            let nightNewItem = NightActivity(context: context)
+            nightNewItem.nightName = data.data[i]
+            nightNewItem.nightDate = Date()
+            nightNewItem.nightIsAdd = false
+            nightNewItem.nightIsDone = false
+            if i == 6 || i == 7 || i == 8{
+                nightNewItem.nightIsAdd = true
+            }
+            
+        }
+        
+        
+        UserDefaults.standard.set(true, forKey: "databaseMade")
     }
 
 }
